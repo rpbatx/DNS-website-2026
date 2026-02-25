@@ -1,0 +1,13 @@
+# robots.txt — Dietary Network Services
+# https://dietarynetwork.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Block access to utility and config files
+Disallow: /css/
+Disallow: /js/
+Disallow: /fonts/
+
+# Sitemap location
+Sitemap: https://dietarynetwork.com/sitemap.xml

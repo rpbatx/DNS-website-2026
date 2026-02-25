@@ -1,0 +1,269 @@
+/* === STYLES — Dietary Network Services === */
+/* PAGE: styles.css | LAST UPDATED: 2026-02-25 | EDITOR: AI */
+
+/* ============================================================
+   SECTION 1: CSS CUSTOM PROPERTIES (VARIABLES)
+   All colors, fonts, spacing, and design tokens live here.
+   Never use hardcoded values in component styles below.
+   ============================================================ */
+
+:root {
+
+  /* --- Colors --- */
+  --color-primary:        #1b2a4a;   /* Brand navy — CTAs, links, active states */
+  --color-secondary:      #f5c327;   /* Brand gold — highlights, hover states */
+  --color-background:     #f8f9fa;   /* Page background */
+  --color-surface:        #ffffff;   /* Card / section background */
+  --color-surface-alt:    #f0f2f5;   /* Alternate surface for zebra sections */
+  --color-text:           #1a1a2e;   /* Primary body text */
+  --color-text-muted:     #5a6478;   /* Secondary / muted text — min 4.5:1 contrast */
+  --color-border:         #dde1e9;   /* Dividers and borders */
+  --color-error:          #c0392b;   /* Form errors and alerts */
+  --color-success:        #27ae60;   /* Confirmations and success messages */
+  --color-primary-light:  #253b6e;   /* Lighter tint of primary for hover states */
+  --color-primary-dark:   #111d33;   /* Darker shade for pressed/active states */
+  --color-secondary-dark: #d4a820;   /* Darker gold for text on light backgrounds */
+  --color-overlay:        rgba(27, 42, 74, 0.7); /* Semi-transparent primary for overlays */
+
+  /* --- Typography --- */
+  --font-body:      'Inter', 'Roboto', sans-serif;
+  --font-heading:   'Inter', 'Roboto', sans-serif;
+  --font-size-base: 1rem;       /* 16px */
+  --line-height:    1.6;
+
+  /* Heading scale */
+  --text-h1: 2.5rem;    /* 40px */
+  --text-h2: 2rem;      /* 32px */
+  --text-h3: 1.5rem;    /* 24px */
+  --text-h4: 1.25rem;   /* 20px */
+  --text-h5: 1.125rem;  /* 18px */
+  --text-h6: 1rem;      /* 16px */
+
+  /* Body text sizes */
+  --text-lg:  1.125rem; /* 18px */
+  --text-sm:  0.875rem; /* 14px */
+  --text-xs:  0.75rem;  /* 12px */
+
+  /* --- Spacing Scale (4px base unit) --- */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* --- Layout --- */
+  --max-width:         1200px;
+  --section-padding-y: var(--space-20);  /* 80px desktop */
+  --section-padding-x: var(--space-6);   /* 24px */
+  --container-padding: 0 var(--space-6);
+
+  /* --- Components --- */
+  --radius:       8px;
+  --radius-sm:    4px;
+  --radius-lg:   16px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm:  0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow:     0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md:  0 10px 15px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.04);
+  --shadow-lg:  0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+
+  /* Transitions */
+  --transition:       150ms ease;
+  --transition-slow:  300ms ease;
+
+  /* --- Navigation --- */
+  --nav-height: 72px;
+
+  /* --- Z-index scale --- */
+  --z-below:    -1;
+  --z-base:      0;
+  --z-above:    10;
+  --z-nav:     100;
+  --z-modal:   200;
+  --z-toast:   300;
+}
+
+/* ============================================================
+   SECTION 2: BASE STYLES
+   Applied globally. Mobile-first.
+   ============================================================ */
+
+html {
+  font-size: var(--font-size-base);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+/* --- Headings --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-primary);
+}
+
+h1 { font-size: var(--text-h1); }
+h2 { font-size: var(--text-h2); }
+h3 { font-size: var(--text-h3); }
+h4 { font-size: var(--text-h4); }
+h5 { font-size: var(--text-h5); }
+h6 { font-size: var(--text-h6); }
+
+/* --- Links --- */
+a {
+  color: var(--color-primary);
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-secondary-dark);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* --- Body text --- */
+p {
+  margin-bottom: var(--space-4);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================================
+   SECTION 3: LAYOUT UTILITIES
+   ============================================================ */
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+.section {
+  padding-block: var(--space-12); /* 48px mobile */
+}
+
+/* ============================================================
+   SECTION 4: SKIP LINK (ACCESSIBILITY)
+   ============================================================ */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius);
+  font-weight: 700;
+  z-index: var(--z-toast);
+  transition: top var(--transition);
+}
+
+.skip-link:focus {
+  top: var(--space-4);
+}
+
+/* ============================================================
+   SECTION 5: NAVIGATION
+   (Full styles built in Phase 3 — structure placeholder)
+   ============================================================ */
+
+/* ============================================================
+   SECTION 6: BUTTONS
+   (Full styles built in Phase 3 — structure placeholder)
+   ============================================================ */
+
+/* ============================================================
+   SECTION 7: FORMS
+   (Full styles built in Phase 3 — structure placeholder)
+   ============================================================ */
+
+/* ============================================================
+   SECTION 8: CARDS
+   (Full styles built in Phase 3 — structure placeholder)
+   ============================================================ */
+
+/* ============================================================
+   SECTION 9: FOOTER
+   (Full styles built in Phase 3 — structure placeholder)
+   ============================================================ */
+
+/* ============================================================
+   SECTION 10: COOKIE CONSENT BANNER
+   (Full styles built in Phase 3 — structure placeholder)
+   ============================================================ */
+
+/* ============================================================
+   SECTION 11: PRINT STYLES
+   ============================================================ */
+
+@media print {
+  header,
+  footer,
+  nav,
+  .cookie-banner,
+  .skip-link {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    color: #000;
+    background: #fff;
+  }
+
+  a::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.8em;
+    color: #555;
+  }
+}
+
+/* ============================================================
+   SECTION 12: RESPONSIVE BREAKPOINTS
+   Mobile-first — min-width media queries only
+   ============================================================ */
+
+/* Tablet: 480px+ */
+@media (min-width: 480px) {
+  /* Tablet adjustments */
+}
+
+/* Laptop: 768px+ */
+@media (min-width: 768px) {
+  .section {
+    padding-block: var(--section-padding-y); /* 80px */
+  }
+}
+
+/* Desktop: 1024px+ */
+@media (min-width: 1024px) {
+  /* Full multi-column layouts */
+}
+
+/* Wide: 1440px+ */
+@media (min-width: 1440px) {
+  /* Content remains capped at --max-width: 1200px */
+}
