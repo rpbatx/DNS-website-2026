@@ -1,0 +1,604 @@
+# DNS Website Project Plan 2026
+
+**AI Website Build — Project Plan**
+Repeatable · Savable · Fully AI-Executable
+*No coding required by the designer*
+
+---
+
+## About This Document
+
+This is a structured, repeatable project plan that an AI engine executes from start to finish to build and deploy a professional website. The human designer provides content, branding preferences, and approvals only. The AI engine handles all code, testing, optimization, and deployment. This document is saved in the repository and serves as the permanent, authoritative record of the project.
+
+### How to Use This Plan
+
+1. Fill in the Project Inputs section (Section 1) with your specific project details.
+2. Hand this document to your AI engine (Claude, GPT-4, Gemini, etc.).
+3. The AI reads each phase sequentially and executes every task.
+4. You review and approve at each Phase Gate before the AI proceeds.
+5. Save this completed document as the permanent record of the project.
+
+---
+
+## Project Status Tracker
+
+| Field | Value |
+|---|---|
+| **Current Phase** | Pre-Build — Project Setup |
+| **Last Session Date** | 2026-02-25 |
+| **AI Engine** | Claude Sonnet 4.6 |
+| **Project Start Date** | 2026-02-25 |
+| **Launch Date** | TBD |
+| **Live URL** | TBD |
+
+### Phase Completion Status
+
+| Phase | Name | Status |
+|---|---|---|
+| — | Project Setup & Plan | ✅ Complete |
+| 1 | Environment Setup | ⬜ Not Started |
+| 2 | HTML Structure & Semantic Markup | ⬜ Not Started |
+| 3 | Styling & Visual Design | ⬜ Not Started |
+| 4 | Content, Graphics & Media | ⬜ Not Started |
+| 5 | SEO Optimization | ⬜ Not Started |
+| 6 | Security & Legal Compliance | ⬜ Not Started |
+| 7 | Forms, Interactions & Error Handling | ⬜ Not Started |
+| 8 | Performance Optimization | ⬜ Not Started |
+| 9 | Testing | ⬜ Not Started |
+| 10 | Deployment | ⬜ Not Started |
+
+### Session Log
+
+| Date | Session Summary |
+|---|---|
+| 2026-02-25 | Project initiated. Source docx converted and PROJECT_PLAN.md created as authority of record. Repository initialized. |
+
+---
+
+## Section 1 — Project Inputs
+
+*The designer fills in this section before handing the plan to the AI engine. Every field below is a direct instruction to the AI.*
+
+| Input Field | Value |
+|---|---|
+| **Project Name** | Dietary Network Services |
+| **Primary Domain** | Dietarynetwork.com |
+| **Hosting Provider** | Will be new provider based upon Claude recommendations — most likely GitHub Pages |
+| **Hosting Login** | TBD |
+| **Site Purpose** | Business Brochure and promotion |
+| **Target Audience** | Professional, legal, attorneys, physicians |
+| **Primary Language** | English (US) |
+| **Secondary Languages** | None |
+| **Brand Colors (Hex)** | Primary: `#1b2a4a` · Accent: `#f5c327` |
+| **Preferred Font** | TBD — or AI to choose (Inter, Roboto, or Open Sans recommended) |
+| **Number of Pages** | Model from existing site |
+| **Logo File** | Plan to upload once file structure is created |
+| **Content Files** | Acquire from existing site |
+| **Competitor URLs** | https://www.forensisgroup.com/forensis-expert-witness/expertise/diet-and-nutrition · https://www.expertwitnessdietitian.com/ |
+| **Special Features** | Contact Form |
+| **Analytics** | Google Analytics |
+| **Cookie Consent Region** | TBD — US only / EU (GDPR) / Both / Global |
+| **Legal Entity Name** | Dietary Network Services, LLC |
+| **Contact Email** | info@dietarynetworkservices.com |
+| **Launch Deadline** | 2026-03-05 |
+
+---
+
+## Section 2 — Technology Stack
+
+*The AI engine uses the following standardized, minimal, and maintainable stack for every build. No frameworks requiring compilation or complex tooling. All choices prioritize ease of future editing, security, and performance.*
+
+| Layer | Technology & Rationale |
+|---|---|
+| **Structure** | Semantic HTML5 — clean, accessible, SEO-native markup |
+| **Styling** | CSS3 with CSS custom properties (variables) — no preprocessors needed |
+| **Interactivity** | Vanilla JavaScript (ES6+) — zero dependencies, no frameworks |
+| **Icons** | SVG inline icons — no icon font libraries, no external requests |
+| **Fonts** | Google Fonts via preconnect — single font family, 2 weights max |
+| **Images** | WebP format with JPG fallback — compressed, lazy-loaded |
+| **Hosting** | Static site — deploys to any host (Netlify, Vercel, cPanel, GitHub Pages) |
+| **Version Control** | Git repository — full history, easy rollback |
+| **Build Process** | None required — files are deployment-ready as written |
+| **CMS (optional)** | Netlify CMS or Decap CMS — file-based, no database required |
+
+---
+
+## Section 3 — Project File Structure
+
+*The AI creates and maintains this exact folder structure. Every file has a defined location. Every page should have a folder. This organization enables easy updates, clear separation of concerns, and straightforward deployment.*
+
+```
+/project-root/
+├── index.html                  (Home page)
+├── about.html                  (About page)
+├── services.html               (Services page)
+├── contact.html                (Contact page)
+├── privacy-policy.html         (Legal — required)
+├── terms-of-service.html       (Legal — required)
+├── cookie-policy.html          (Legal — required)
+├── 404.html                    (Custom error page)
+├── sitemap.xml                 (SEO — auto-generated)
+├── robots.txt                  (SEO — crawler instructions)
+├── .htaccess                   (Server security headers)
+├── /css/
+│   ├── styles.css              (All styles — one file)
+│   └── reset.css               (Browser normalization)
+├── /js/
+│   ├── main.js                 (Navigation, UI interactions)
+│   ├── cookies.js              (Cookie consent logic)
+│   └── analytics.js            (Analytics — loads after consent)
+├── /images/
+│   ├── /hero/                  (Hero / banner images)
+│   ├── /content/               (Body images)
+│   ├── /icons/                 (SVG icons)
+│   └── logo.svg                (Brand logo)
+├── /fonts/                     (Self-hosted font fallbacks)
+└── /docs/
+    └── PROJECT_PLAN.md         (This document — authority of record)
+```
+
+---
+
+## Section 4 — Design & UX Standards
+
+*These standards apply to every page without exception. The AI enforces them automatically throughout the build.*
+
+### 4.1 Typography
+
+| Element | Rule |
+|---|---|
+| **Font Family** | Single sans-serif family (e.g., Inter or Roboto). Declared in CSS variable `--font-body`. |
+| **Heading Font** | Same family, bold weight. Declared in CSS variable `--font-heading`. |
+| **Body Size** | 16px base (1rem). Line height 1.6. |
+| **Heading Scale** | H1: 2.5rem \| H2: 2rem \| H3: 1.5rem \| H4: 1.25rem |
+| **Font Loading** | `preconnect` to Google Fonts. `display=swap` to prevent invisible text. |
+| **Max Font Weights** | 2 weights only (regular + bold) to minimize load time. |
+
+### 4.2 Color System
+
+| CSS Variable | Purpose & Rule |
+|---|---|
+| `--color-primary` | Main brand color (`#1b2a4a`). Used for CTAs, links, active states. |
+| `--color-secondary` | Accent color (`#f5c327`). Used for highlights and hover states. |
+| `--color-background` | Page background. Default: `#FDFFFC` or `#F8F9FA`. |
+| `--color-surface` | Card/section background. Slightly off-white. |
+| `--color-text` | Body text. Default: `#011627` or `#333333`. |
+| `--color-text-muted` | Secondary text. Min contrast ratio 4.5:1 (WCAG AA). |
+| `--color-border` | Dividers and borders. Subtle, non-distracting. |
+| `--color-error` | `#C0392B` — form errors and alerts. |
+| `--color-success` | `#27AE60` — confirmations and success messages. |
+
+### 4.3 Layout & Spacing
+
+- Max content width: 1200px, centered with auto margins
+- Section padding: 80px top/bottom desktop, 48px mobile
+- Grid system: CSS Grid for layouts, Flexbox for component alignment
+- Spacing scale: 4px base unit. Use multiples: 8, 16, 24, 32, 48, 64, 80px
+- Border radius: consistent variable `--radius` (e.g., 8px) across all elements
+- Shadows: subtle `box-shadow` using CSS variable `--shadow` for depth
+
+### 4.4 Responsive Breakpoints
+
+| Breakpoint | Behavior |
+|---|---|
+| **Mobile** | < 480px — single column, stacked navigation, large tap targets (44px min) |
+| **Tablet** | 480px – 768px — adapted grid, hamburger menu |
+| **Laptop** | 768px – 1024px — 2-column layouts where applicable |
+| **Desktop** | > 1024px — full multi-column layouts, expanded navigation |
+| **Wide** | > 1440px — content remains capped at 1200px max-width |
+
+---
+
+## Section 5 — Build Phases
+
+*The AI engine executes each phase in sequence. A Phase Gate checkpoint appears at the end of each phase. The AI must present its output to the designer for approval before proceeding to the next phase.*
+
+---
+
+### Phase 1 — Environment Setup
+
+*AI creates the project scaffold, file structure, and base configuration.*
+
+#### Tasks
+
+- [ ] Create the full directory structure exactly as defined in Section 3
+- [ ] Initialize Git repository with `.gitignore` (exclude `node_modules`, `.env`, `.DS_Store`)
+- [ ] Create `reset.css` with modern CSS reset (box-sizing, margin/padding zero, img max-width)
+- [ ] Create `styles.css` with all CSS custom properties (variables) from Section 4
+- [ ] Create empty HTML shell for each page with correct DOCTYPE, lang attribute, and charset
+- [ ] Create `robots.txt` allowing all crawlers, pointing to `sitemap.xml`
+- [ ] Create `.htaccess` with security headers (X-Frame-Options, X-Content-Type-Options, CSP, HSTS, Referrer-Policy)
+
+#### Phase Gate 1
+
+> **AI presents:** directory listing, `styles.css` variables, and `.htaccess` security headers.
+> **Designer confirms:** structure is correct before proceeding.
+>
+> **Status:** ⬜ Awaiting execution
+
+---
+
+### Phase 2 — HTML Structure & Semantic Markup
+
+*AI builds all pages with correct semantic HTML5.*
+
+#### Tasks
+
+- [ ] Build `<head>` template reused on every page: charset, viewport, canonical, Open Graph, Twitter Card, favicon, preconnect fonts, stylesheet links
+- [ ] Build semantic `<header>`: logo (linked to `index.html`), `<nav>` with `<ul>` links to all pages, skip-to-content link for accessibility, `aria-label` on nav
+- [ ] Build `<main>` with page-specific content sections using correct semantic elements: `<section>`, `<article>`, `<aside>`, `<figure>`, `<figcaption>`
+- [ ] Build `<footer>`: copyright, legal page links, social links (if applicable), back-to-top link
+- [ ] Add `aria-label`, `role`, and `alt` attributes to all interactive and visual elements
+- [ ] Add structured data (JSON-LD) for Organization schema on every page
+- [ ] Build `404.html` with friendly message *"Oops, looks like we have an unplanned disassembly — let's get you back to the normal world"*, search box, and link back to homepage
+- [ ] Add `<noscript>` fallback message on every page for users with JS disabled
+
+#### Semantic Element Requirements
+
+| Element | Usage Rule |
+|---|---|
+| `<header>` | Site-wide header containing logo and primary navigation only |
+| `<nav>` | All navigation elements. `aria-label='Primary navigation'` |
+| `<main>` | Unique page content. Only ONE per page. `id='main-content'` |
+| `<section>` | Thematic groupings within a page. Each must have a heading |
+| `<article>` | Standalone content (blog posts, cards). Self-contained meaning |
+| `<aside>` | Supplementary content related to main (sidebars, callouts) |
+| `<footer>` | Site-wide footer. Contains legal links and contact info |
+| `<figure>`/`<figcaption>` | All images with captions. Improves SEO and accessibility |
+| `<time>` | All dates using `datetime` attribute in ISO 8601 format |
+| `<address>` | Contact information in footer and contact page |
+
+#### Phase Gate 2
+
+> **AI presents:** all HTML files rendered in browser screenshots.
+> **Designer confirms:** structure, navigation, and all links work correctly.
+>
+> **Status:** ⬜ Awaiting execution
+
+---
+
+### Phase 3 — Styling & Visual Design
+
+*AI applies all CSS, responsive behavior, and visual consistency.*
+
+#### Tasks
+
+- [ ] Apply typography scale from Section 4.1 to all heading and body elements
+- [ ] Build responsive navigation: full horizontal nav on desktop, animated hamburger menu on mobile
+- [ ] Style all page sections with consistent padding, color, and layout from Section 4
+- [ ] Build card components for services/features: hover state, subtle shadow, consistent border radius
+- [ ] Style all buttons: primary, secondary, ghost variants. Hover/focus/active states required
+- [ ] Style all form elements: inputs, textareas, selects, checkboxes — consistent with brand
+- [ ] Implement CSS animations: fade-in on scroll (Intersection Observer), smooth hover transitions (max 300ms)
+- [ ] Build cookie consent banner: fixed bottom bar, accepts/rejects, stores preference in localStorage
+- [ ] Style 404 page to match site design fully
+- [ ] Add print stylesheet: `@media print` removing nav, footer, ads, and unnecessary elements
+
+#### CSS Rules the AI Must Follow
+
+- All colors via CSS variables only — no hardcoded hex values in component styles
+- All spacing via the 4px scale — no arbitrary pixel values
+- Mobile-first: base styles for mobile, then `min-width` media queries for larger screens
+- No `!important` — specificity must be managed through proper selector structure
+- All interactive elements must have `:focus-visible` styles for keyboard accessibility
+- Minimum touch target size: 44×44px for all clickable elements on mobile
+- Images: `width: 100%; height: auto; display: block` to prevent layout shift
+
+#### Phase Gate 3
+
+> **AI presents:** desktop and mobile screenshots of every page.
+> **Designer confirms:** visual design, colors, fonts, and spacing match brand requirements.
+>
+> **Status:** ⬜ Awaiting execution
+
+---
+
+### Phase 4 — Content, Graphics & Media
+
+*AI places all content, optimizes all images, and generates placeholder visuals.*
+
+#### Tasks
+
+- [ ] Insert all copy from designer-provided content files into correct page sections
+- [ ] Optimize all images: convert to WebP, compress to <150KB per image, generate 2× retina versions
+- [ ] Implement lazy loading on all images below the fold: `loading='lazy'` attribute + IntersectionObserver JS fallback
+- [ ] Add `width` and `height` attributes to all `<img>` tags to prevent Cumulative Layout Shift (CLS)
+- [ ] Create SVG hero graphics or place optimized hero images with `srcset` for responsive serving
+- [ ] Generate all favicon sizes: 16×16, 32×32, 180×180 (Apple touch), 192×192, 512×512 (PWA)
+- [ ] Create Open Graph image (1200×630px) for social sharing previews
+- [ ] Add descriptive alt text to every image — keyword-relevant, not generic
+- [ ] If no images provided: generate placeholder images using SVG patterns or abstract CSS backgrounds
+
+#### Phase Gate 4
+
+> **AI presents:** all pages with final content and images in place.
+> **Designer confirms:** all copy is correct and all images display properly.
+>
+> **Status:** ⬜ Awaiting execution
+
+---
+
+### Phase 5 — SEO Optimization
+
+*AI implements full on-page SEO and technical SEO.*
+
+#### Tasks
+
+- [ ] Write unique `<title>` tag for every page: `Brand Name | Page Description` (50–60 chars)
+- [ ] Write unique meta description for every page (150–160 chars, includes primary keyword)
+- [ ] Add canonical URL tag to every page to prevent duplicate content
+- [ ] Implement Open Graph tags: `og:title`, `og:description`, `og:image`, `og:url`, `og:type`
+- [ ] Implement Twitter Card tags: `twitter:card`, `twitter:title`, `twitter:description`, `twitter:image`
+- [ ] Generate `sitemap.xml` listing all pages with `lastmod`, `changefreq`, and `priority`
+- [ ] Verify `robots.txt` correctly points to `sitemap.xml` location
+- [ ] Add JSON-LD structured data: Organization, WebSite, BreadcrumbList on all pages
+- [ ] Ensure all heading hierarchy is correct: one H1 per page, logical H2/H3 nesting
+- [ ] Add `hreflang` tags if site is multilingual
+- [ ] Verify all internal links use relative URLs and have descriptive anchor text
+- [ ] Implement `rel='noopener noreferrer'` on all external links
+
+#### SEO Requirements Table
+
+| SEO Element | Requirement |
+|---|---|
+| **Title Tag** | 50–60 chars \| Unique per page \| Primary keyword near front |
+| **Meta Description** | 150–160 chars \| Unique \| Includes CTA \| No keyword stuffing |
+| **H1 Tag** | One per page \| Matches page intent \| Contains primary keyword |
+| **Image Alt Text** | Descriptive, keyword-relevant \| Not empty, not "image of..." |
+| **URL Structure** | Lowercase, hyphens, no underscores, no parameters, no trailing slash |
+| **Core Web Vitals** | LCP < 2.5s \| FID < 100ms \| CLS < 0.1 |
+| **Page Speed** | Target 90+ on Google PageSpeed Insights (mobile and desktop) |
+| **Schema Markup** | Organization + WebSite on homepage \| BreadcrumbList on all pages |
+
+#### Phase Gate 5
+
+> **AI presents:** PageSpeed Insights scores and SEO audit report.
+> **Designer confirms:** all scores meet targets before proceeding.
+>
+> **Status:** ⬜ Awaiting execution
+
+---
+
+### Phase 6 — Security & Legal Compliance
+
+*AI implements all security headers and generates required legal pages.*
+
+#### 6.1 Security Headers (.htaccess / server config)
+
+| Header | Implementation Rule |
+|---|---|
+| `Content-Security-Policy` | Restricts resource origins. Prevents XSS. Whitelists Google Fonts, Analytics. |
+| `X-Frame-Options` | `DENY` — prevents clickjacking attacks. |
+| `X-Content-Type-Options` | `nosniff` — prevents MIME-type sniffing attacks. |
+| `Referrer-Policy` | `strict-origin-when-cross-origin` — limits referrer data leakage. |
+| `Permissions-Policy` | Disables camera, microphone, geolocation unless explicitly needed. |
+| `Strict-Transport-Security` | `max-age=31536000; includeSubDomains` — enforces HTTPS for 1 year. |
+| `Cache-Control` | Versioned assets cached 1 year. HTML `no-cache` for freshness. |
+
+#### 6.2 Legal Pages (AI generates, designer reviews)
+
+| Page | Content Requirement |
+|---|---|
+| **Privacy Policy** | GDPR + CCPA compliant. Covers: data collected, purpose, retention, third parties, user rights, contact. Auto-populated with project details from Section 1. |
+| **Terms of Service** | Covers: acceptable use, IP ownership, disclaimers, limitation of liability, governing law. Auto-populated with legal entity name. |
+| **Cookie Policy** | Lists all cookies by name, type, purpose, and duration. Covers consent mechanism. Required for EU compliance. |
+| **Accessibility Statement** | WCAG 2.1 AA conformance claim. Contact for accessibility issues. Required for ADA compliance. |
+
+#### 6.3 Cookie Consent Implementation
+
+- Banner appears on first visit for EU users (detected by timezone or explicit setting)
+- Three categories: Necessary (always on), Analytics (opt-in), Marketing (opt-in)
+- Analytics script only loads AFTER user accepts analytics cookies
+- Preference stored in localStorage with expiry of 365 days
+- User can change preference at any time via footer link to cookie settings
+- No pre-ticked boxes. No dark patterns. No paywall for refusal.
+
+#### 6.4 Ad Blocker Compatibility
+
+- Analytics: use first-party server-side proxy or cookieless GA4 mode
+- No content served from ad networks on first-party pages
+- Graceful degradation: if analytics blocked, site continues to function normally
+- No layout shifts or broken layouts when ad blockers are active
+
+#### Phase Gate 6
+
+> **AI presents:** security header test results (securityheaders.com) and legal page drafts.
+> **Designer reviews and approves** all legal pages before proceeding.
+>
+> **Status:** ⬜ Awaiting execution
+
+---
+
+### Phase 7 — Forms, Interactions & Error Handling
+
+*AI builds all interactive elements with full validation and error handling.*
+
+#### Tasks
+
+- [ ] Build contact form: name, email, subject, message fields. All with HTML5 + JS validation
+- [ ] Form validation rules: required fields, email format, min/max character limits, no SQL injection
+- [ ] Error messages: displayed inline below each field, in red (`#C0392B`), with `aria-live='polite'`
+- [ ] Success message: replaces form after submission, confirms next steps to user
+- [ ] Form submission: send via Formspree, Netlify Forms, or EmailJS (no server required)
+- [ ] Add honeypot field and rate limiting logic to deter spam bots
+- [ ] CSRF protection: use service-provided tokens (Formspree/Netlify handle this automatically)
+- [ ] All error states must be keyboard accessible and screen-reader friendly
+
+#### Error Message Standards
+
+| Error Scenario | Message & Behavior |
+|---|---|
+| Empty required field | *"This field is required."* Shown on blur and on submit attempt. |
+| Invalid email | *"Please enter a valid email address."* Shown on blur. |
+| Message too short | *"Please enter at least 20 characters."* Shown on blur. |
+| Submission failure | *"Something went wrong. Please try again or email us directly at [email]."* |
+| 404 Page | Friendly heading, brief explanation, search box, link to homepage, popular links. |
+| Offline / No JS | `<noscript>` message explaining that JS is required for some features. |
+
+#### Phase Gate 7
+
+> **AI presents:** working form demo with all validation states triggered.
+> **Designer confirms:** all error messages display correctly and form submissions are received.
+>
+> **Status:** ⬜ Awaiting execution
+
+---
+
+### Phase 8 — Performance Optimization
+
+*AI optimizes all assets and code for maximum speed.*
+
+#### Tasks
+
+- [ ] Minify CSS: remove comments, whitespace, and redundant rules (output: `styles.min.css`)
+- [ ] Minify JavaScript: remove comments and whitespace (output: `main.min.js`)
+- [ ] Update all HTML to reference `.min` versions of CSS and JS
+- [ ] Implement resource hints on every page: `preconnect` (fonts), `dns-prefetch` (analytics), `preload` (hero image, critical CSS)
+- [ ] Defer all non-critical JS: `<script src='main.min.js' defer></script>`
+- [ ] Inline critical CSS (above-the-fold styles) in `<head>` to eliminate render-blocking
+- [ ] Enable GZIP/Brotli compression in `.htaccess`
+- [ ] Set cache headers: 1 year for versioned assets, `no-cache` for HTML
+- [ ] Verify all images are WebP with correct `srcset` and `sizes` attributes
+- [ ] Run Lighthouse audit. Fix all issues scoring below 90 on Performance, Accessibility, Best Practices, SEO
+
+#### Phase Gate 8
+
+> **AI presents:** Lighthouse report showing all four scores >= 90.
+> **Designer approves** performance results before deployment.
+>
+> **Status:** ⬜ Awaiting execution
+
+---
+
+### Phase 9 — Testing
+
+*AI runs comprehensive tests across devices, browsers, and edge cases.*
+
+#### Test Requirements
+
+| Test Type | Pass Criteria |
+|---|---|
+| **Functional Testing** | Every link, button, and form on every page tested. No broken links. No 404s on internal paths. |
+| **Cross-Browser** | Chrome, Firefox, Safari, Edge — latest two versions of each. |
+| **Mobile Testing** | iPhone SE (small), iPhone 14 (medium), iPad, Android mid-range — all layouts checked. |
+| **Accessibility** | WAVE tool audit. No errors. Keyboard navigation tested on all interactive elements. |
+| **Performance** | Google PageSpeed Insights: 90+ mobile, 95+ desktop. |
+| **SEO** | Screaming Frog crawl: zero missing titles, descriptions, H1s, or broken links. |
+| **Security** | securityheaders.com: Grade A or higher. No mixed content (HTTP on HTTPS page). |
+| **Form Testing** | All validation states tested. Submission tested. Spam honeypot verified. |
+| **Legal** | Privacy policy, terms, cookie policy, accessibility statement all linked in footer. |
+| **404 Testing** | Manually verify custom 404 page loads for non-existent URLs. |
+| **Print Testing** | Print preview checked in Chrome — unnecessary elements hidden. |
+| **Ad Blocker** | uBlock Origin enabled: site loads and functions normally, no layout breaks. |
+
+#### Phase Gate 9
+
+> **AI presents:** full test report with pass/fail for every item above. All items must PASS before deployment.
+> **Designer signs off** on test results.
+>
+> **Status:** ⬜ Awaiting execution
+
+---
+
+### Phase 10 — Deployment
+
+*AI uploads all files and configures the live website.*
+
+#### Tasks
+
+- [ ] Connect to hosting provider using credentials from Section 1
+- [ ] Upload all files to the correct public directory (`public_html`, `www`, or `dist` depending on host)
+- [ ] Verify `.htaccess` is uploaded and active (test redirect HTTP → HTTPS)
+- [ ] Configure SSL certificate if not auto-provisioned (Let's Encrypt via hosting panel)
+- [ ] Set up www to non-www redirect (or reverse) in `.htaccess` — pick one canonical version
+- [ ] Submit `sitemap.xml` to Google Search Console
+- [ ] Submit `sitemap.xml` to Bing Webmaster Tools
+- [ ] Verify Google Analytics is receiving data (check Realtime report)
+- [ ] Run full post-deployment test: visit every page URL on live domain and verify load
+- [ ] Test contact form on live domain — confirm email delivery
+- [ ] Verify SSL is active and all pages load via HTTPS with no mixed content warnings
+- [ ] Take and save screenshots of every live page as the launch record
+
+#### Common Hosting Deployment Methods
+
+| Hosting Provider | Deployment Method |
+|---|---|
+| **Netlify** | Drag and drop `/project-root` folder into Netlify dashboard, or connect Git repo for auto-deploy |
+| **Vercel** | Connect Git repo. Vercel detects static site and deploys automatically |
+| **cPanel** (Namecheap, SiteGround) | Use File Manager or FTP to upload all files to `public_html` directory |
+| **GitHub Pages** | Push to `gh-pages` branch. Enable in repo Settings > Pages. Set custom domain in `CNAME` file |
+| **AWS S3 + CloudFront** | Upload to S3 bucket with static website hosting. Configure CloudFront for HTTPS and CDN |
+
+#### Phase Gate 10 — Final Launch Approval
+
+> **AI presents:** live URL, screenshots of every page, and Lighthouse report run on the live site.
+> **Designer confirms** the live site matches approved designs and all features work.
+> **Project is COMPLETE.**
+>
+> **Status:** ⬜ Awaiting execution
+
+---
+
+## Section 6 — Documentation Requirements
+
+*The AI must produce the following documentation files as part of every project. Saved in the `/docs/` folder.*
+
+| Document | Content Requirement |
+|---|---|
+| `README.md` | Project overview, tech stack, how to edit content, how to add a page, how to deploy updates |
+| `CHANGELOG.md` | Date-stamped log of every change made. Format: `[Date] [What changed] [Why]` |
+| `CONTENT-GUIDE.md` | Where to find every piece of text on the site. How to edit it without breaking layout. |
+| `IMAGE-GUIDE.md` | Image size requirements for each location. How to compress and name new images. |
+| `SEO-GUIDE.md` | How to update title, description, and structured data for new pages. |
+| `DEPLOYMENT-GUIDE.md` | Step-by-step instructions for updating and re-deploying the site. |
+| `STYLE-GUIDE.md` | All CSS variables listed. Color palette. Font choices. Spacing scale. Component examples. |
+
+### Documentation Rules
+
+Every HTML file must have a comment block at the top:
+```html
+<!-- PAGE: [Page Name] | LAST UPDATED: [Date] | EDITOR: [AI/Designer] -->
+```
+
+Every CSS section must have a comment:
+```css
+/* === SECTION NAME === */
+```
+
+Every JS function must have a one-line comment explaining what it does.
+
+---
+
+## Section 7 — Ongoing Maintenance Protocol
+
+*After launch, the designer hands this section to the AI engine for any future update request. The AI follows this protocol for every change.*
+
+| Update Type | Protocol Steps |
+|---|---|
+| **Content Update** | 1. Edit HTML file → 2. Update `CHANGELOG.md` → 3. Re-minify if CSS/JS changed → 4. Re-deploy → 5. Verify live |
+| **Add a New Page** | 1. Copy closest existing HTML → 2. Update `<title>`, meta, H1, canonical → 3. Add to nav on all pages → 4. Add to `sitemap.xml` → 5. Deploy and verify |
+| **Image Replacement** | 1. Compress new image to WebP → 2. Replace file in `/images/` → 3. Verify alt text is still accurate → 4. Deploy |
+| **Style Change** | 1. Edit CSS variable in `:root` → 2. Verify change across all pages → 3. Re-minify → 4. Deploy |
+| **Security Update** | 1. Review `.htaccess` headers for new threats → 2. Update CSP if new third-party added → 3. Re-test securityheaders.com → 4. Deploy |
+| **Legal Page Update** | 1. Update policy content → 2. Update "Last revised" date → 3. If GDPR change, notify users via banner → 4. Deploy |
+
+---
+
+## Project Sign-Off
+
+*To be completed at project launch.*
+
+| Field | Value |
+|---|---|
+| **Designer Name** | |
+| **AI Engine Used** | Claude Sonnet 4.6 |
+| **Project Start Date** | 2026-02-25 |
+| **Launch Date** | |
+| **Live URL** | |
+| **Final Lighthouse Score (Mobile)** | Performance: ___ \| Accessibility: ___ \| Best Practices: ___ \| SEO: ___ |
+| **Designer Approval Signature** | |
+| **Date Signed** | |
+
+---
+
+*Save this document in the `/docs/` folder as `PROJECT_PLAN.md`. This serves as the permanent record of how the site was built and how to maintain it. For new projects, copy this file, clear the Project Inputs in Section 1, and start again.*
