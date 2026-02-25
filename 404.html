@@ -5,33 +5,141 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Not Found | Dietary Network Services</title>
-  <meta name="description" content="The page you were looking for could not be found.">
+  <meta name="description" content="The page you were looking for could not be found. Return to the Dietary Network Services homepage.">
   <meta name="robots" content="noindex, nofollow">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body id="top">
+
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <header>
-    <!-- PHASE 2: Header and navigation -->
+  <header role="banner">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Dietary Network Services — Home">
+        <span class="logo-text">Dietary Network Services</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-menu" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main id="main-content">
-    <!-- PHASE 2: 404 content
-         Message: "Oops, looks like we have an unplanned disassembly —
-                   let's get you back to the normal world"
-         Include: search box, link to homepage, popular links -->
+
+    <section class="error-page" aria-labelledby="error-heading">
+      <div class="container">
+
+        <div class="error-page-inner">
+
+          <!-- Error graphic placeholder -->
+          <figure class="error-graphic" aria-hidden="true">
+            <!-- PHASE 4: Replace with SVG illustration -->
+            <div class="error-code">404</div>
+          </figure>
+
+          <div class="error-content">
+            <h1 id="error-heading">Oops, looks like we have an unplanned disassembly</h1>
+            <p class="error-sub">Let's get you back to the normal world. The page you were looking for doesn't exist or may have moved.</p>
+
+            <!-- Search box -->
+            <form class="error-search" role="search" action="https://dietarynetwork.com/" method="get" aria-label="Site search">
+              <label for="error-search-input" class="sr-only">Search the site</label>
+              <div class="error-search-group">
+                <input type="search"
+                       id="error-search-input"
+                       name="q"
+                       placeholder="Search the site..."
+                       aria-label="Search query">
+                <button type="submit" class="btn btn-primary" aria-label="Submit search">Search</button>
+              </div>
+            </form>
+
+            <!-- Quick links -->
+            <nav class="error-links" aria-label="Helpful links">
+              <h2>Where would you like to go?</h2>
+              <ul role="list">
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="services.html#long-term-care">Long Term Care</a></li>
+                <li><a href="services.html#legal-services">Legal Case Support</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </nav>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <!-- PHASE 2: Footer -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" aria-label="Dietary Network Services — Home">
+            <span class="logo-text">Dietary Network Services</span>
+          </a>
+          <p>Licensed dietitian consulting and expert witness services since 1999.</p>
+          <address>
+            1108 Lavaca St. Ste. 110-706<br>Austin, TX 78701<br>
+            <a href="tel:+15123352250">512-335-2250</a><br>
+            <a href="mailto:info@dietarynetworkservices.com">info@dietarynetworkservices.com</a>
+          </address>
+        </div>
+        <nav aria-label="Footer site navigation">
+          <h3>Navigation</h3>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Legal pages">
+          <h3>Legal</h3>
+          <ul role="list">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p><small>&copy; <time datetime="2026">2026</time> Dietary Network Services, LLC. All rights reserved.</small></p>
+        <a href="#top" class="back-to-top" aria-label="Back to top of page">&#8593; Top</a>
+      </div>
+    </div>
   </footer>
 
   <noscript>
-    <p>This site works best with JavaScript enabled. Some interactive features may not be available without it.</p>
+    <p style="text-align:center;padding:1rem;background:#f5c327;color:#1b2a4a;font-family:sans-serif;">
+      This site works best with JavaScript enabled. Some interactive features may not be available without it.
+    </p>
   </noscript>
 
   <script src="js/main.js" defer></script>
+
 </body>
 </html>

@@ -4,37 +4,272 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dietary Network Services | Expert Dietitian Witness &amp; Nutrition Consulting</title>
-  <meta name="description" content="">
+  <title>Dietary Network Services | Expert Nutrition Consulting</title>
+  <meta name="description" content="Expert dietary consulting for healthcare and legal professionals. Long-term care support, medical staffing, and expert witness services since 1999.">
   <link rel="canonical" href="https://dietarynetwork.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://dietarynetwork.com/">
+  <meta property="og:title"       content="Dietary Network Services | Expert Nutrition Consulting">
+  <meta property="og:description" content="Expert dietary consulting for healthcare and legal professionals. Long-term care support, medical staffing, and expert witness services since 1999.">
+  <meta property="og:image"       content="https://dietarynetwork.com/images/og-image.webp">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Dietary Network Services | Expert Nutrition Consulting">
+  <meta name="twitter:description" content="Expert dietary consulting for healthcare and legal professionals. Long-term care support, medical staffing, and expert witness services since 1999.">
+  <meta name="twitter:image"       content="https://dietarynetwork.com/images/og-image.webp">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Structured Data: Organization + WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Dietary Network Services",
+        "legalName": "Dietary Network Services, LLC",
+        "url": "https://dietarynetwork.com",
+        "email": "info@dietarynetworkservices.com",
+        "telephone": "+1-512-335-2250",
+        "foundingDate": "1999",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1108 Lavaca St. Ste. 110-706",
+          "addressLocality": "Austin",
+          "addressRegion": "TX",
+          "postalCode": "78701",
+          "addressCountry": "US"
+        },
+        "description": "Dietary Network Services provides specialized dietary consulting, long-term care support, medical facility staffing, and expert witness services to healthcare and legal professionals.",
+        "areaServed": "US"
+      },
+      {
+        "@type": "WebSite",
+        "url": "https://dietarynetwork.com",
+        "name": "Dietary Network Services"
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body id="top">
+
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <header>
-    <!-- PHASE 2: Header and navigation -->
+  <!-- ============================================================
+       HEADER & PRIMARY NAVIGATION
+       ============================================================ -->
+  <header role="banner">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Dietary Network Services — Home">
+        <!-- PHASE 4: Replace with <img src="images/logo.svg" alt="Dietary Network Services" width="200" height="48"> -->
+        <span class="logo-text">Dietary Network Services</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <button class="nav-toggle"
+                aria-expanded="false"
+                aria-controls="nav-menu"
+                aria-label="Toggle navigation menu">
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+
+        <ul id="nav-menu" role="list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
   <main id="main-content">
-    <!-- PHASE 2: Page content -->
+
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <h1 id="hero-heading">Expert Dietary Consulting for Healthcare &amp; Legal Professionals</h1>
+        <p class="hero-sub">Dietary Network Services provides specialized dietitian consulting, long-term care support, and expert witness services — backed by over 25 years of industry experience.</p>
+        <div class="hero-actions">
+          <a href="services.html" class="btn btn-primary">Our Services</a>
+          <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+        </div>
+      </div>
+      <!-- PHASE 4: Add hero background image (images/hero/hero-home.webp) -->
+    </section>
+
+    <!-- Services Overview Section -->
+    <section class="services-overview" aria-labelledby="services-overview-heading">
+      <div class="container">
+        <h2 id="services-overview-heading">How We Can Help</h2>
+        <p class="section-intro">We deliver experienced, professional dietary services tailored to your organization's needs.</p>
+
+        <div class="services-grid">
+
+          <article class="service-card" aria-labelledby="card-ltc">
+            <div class="service-card-icon" aria-hidden="true">
+              <!-- PHASE 4: SVG icon for long-term care -->
+            </div>
+            <h3 id="card-ltc">Long Term Care Facilities</h3>
+            <p>Comprehensive dietary services for senior operators and staff — from clinical assessments to survey management and menu development.</p>
+            <a href="services.html#long-term-care" class="card-link" aria-label="Learn more about Long Term Care Facility services">Learn More</a>
+          </article>
+
+          <article class="service-card" aria-labelledby="card-consulting">
+            <div class="service-card-icon" aria-hidden="true">
+              <!-- PHASE 4: SVG icon for consulting -->
+            </div>
+            <h3 id="card-consulting">Consulting</h3>
+            <p>Executive insight, cost analysis, team building, and dietary program development for organizations of all sizes.</p>
+            <a href="services.html#consulting" class="card-link" aria-label="Learn more about Consulting services">Learn More</a>
+          </article>
+
+          <article class="service-card" aria-labelledby="card-medical">
+            <div class="service-card-icon" aria-hidden="true">
+              <!-- PHASE 4: SVG icon for medical facilities -->
+            </div>
+            <h3 id="card-medical">Medical Facilities</h3>
+            <p>Experienced, knowledgeable dietitians who integrate seamlessly with your medical team to improve patient outcomes and practice efficiency.</p>
+            <a href="services.html#medical-facilities" class="card-link" aria-label="Learn more about Medical Facility services">Learn More</a>
+          </article>
+
+          <article class="service-card" aria-labelledby="card-legal">
+            <div class="service-card-icon" aria-hidden="true">
+              <!-- PHASE 4: SVG icon for legal case support -->
+            </div>
+            <h3 id="card-legal">Legal Case Support</h3>
+            <p>Expert witness services for attorneys handling long-term care dietary disputes — case reviews, depositions, and trial support for over 20 years.</p>
+            <a href="services.html#legal-services" class="card-link" aria-label="Learn more about Legal Case Support services">Learn More</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About Snippet Section -->
+    <section class="about-snippet" aria-labelledby="about-snippet-heading">
+      <div class="container">
+        <div class="about-snippet-inner">
+
+          <div class="about-snippet-text">
+            <h2 id="about-snippet-heading">Serving Healthcare Professionals Since 1999</h2>
+            <p>Dietary Network Services is a professional consulting company focused on providing highly skilled, licensed dietitians to organizations requiring consultative, clinical, or food service dietary expertise.</p>
+            <p>Founded in Austin, TX, we combine local relationships with national availability — bringing industry-leading services that add measurable value to your organization.</p>
+            <a href="about.html" class="btn btn-outline">About Our Company</a>
+          </div>
+
+          <aside class="about-snippet-stats" aria-label="Company highlights">
+            <dl>
+              <div class="stat-item">
+                <dt>Founded</dt>
+                <dd><time datetime="1999">1999</time></dd>
+              </div>
+              <div class="stat-item">
+                <dt>Experience</dt>
+                <dd>25+ Years</dd>
+              </div>
+              <div class="stat-item">
+                <dt>Service Areas</dt>
+                <dd>4 Specialties</dd>
+              </div>
+            </dl>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 id="cta-heading">Ready to Work Together?</h2>
+        <p>Whether you need clinical dietary support, consulting, or expert witness services, we're ready to help.</p>
+        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <!-- PHASE 2: Footer -->
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="index.html" aria-label="Dietary Network Services — Home">
+            <span class="logo-text">Dietary Network Services</span>
+          </a>
+          <p>Licensed dietitian consulting and expert witness services since 1999.</p>
+          <address>
+            1108 Lavaca St. Ste. 110-706<br>
+            Austin, TX 78701<br>
+            <a href="tel:+15123352250">512-335-2250</a><br>
+            <a href="mailto:info@dietarynetworkservices.com">info@dietarynetworkservices.com</a>
+          </address>
+        </div>
+
+        <nav aria-label="Footer site navigation">
+          <h3>Navigation</h3>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Legal pages">
+          <h3>Legal</h3>
+          <ul role="list">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p><small>&copy; <time datetime="2026">2026</time> Dietary Network Services, LLC. All rights reserved.</small></p>
+        <a href="#top" class="back-to-top" aria-label="Back to top of page">&#8593; Top</a>
+      </div>
+    </div>
   </footer>
 
-  <div class="cookie-banner" id="cookie-banner" hidden>
-    <!-- PHASE 3: Cookie consent banner -->
+  <!-- Cookie Consent Banner (Phase 3) -->
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="true"
+       aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-desc" hidden>
+    <!-- PHASE 3: Cookie consent banner content -->
   </div>
 
   <noscript>
-    <p>This site works best with JavaScript enabled. Some interactive features may not be available without it.</p>
+    <p style="text-align:center;padding:1rem;background:#f5c327;color:#1b2a4a;font-family:sans-serif;">
+      This site works best with JavaScript enabled. Some interactive features may not be available without it.
+    </p>
   </noscript>
 
   <script src="js/cookies.js" defer></script>
   <script src="js/analytics.js" defer></script>
   <script src="js/main.js" defer></script>
+
 </body>
 </html>
