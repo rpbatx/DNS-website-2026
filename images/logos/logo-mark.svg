@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" width="52" height="52" role="img" aria-label="DNS — Dietary Network Services">
+  <title>DNS — Dietary Network Services</title>
+  <!-- Emerald background square -->
+  <rect x="0" y="0" width="52" height="52" rx="8" fill="#246B50"/>
+  <!-- Amber accent bar -->
+  <rect x="8" y="10" width="3" height="32" rx="1.5" fill="#D4882A"/>
+  <!-- DNS letters -->
+  <text x="15" y="34"
+        font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif"
+        font-size="18"
+        font-weight="700"
+        fill="#ffffff"
+        letter-spacing="1">DNS</text>
+</svg>

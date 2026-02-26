@@ -12,25 +12,18 @@
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://dietarynetwork.com/about.html">
   <meta property="og:title"       content="About | Dietary Network Services">
-  <meta property="og:description" content="Learn about Dietary Network Services — a professional dietitian consulting firm founded in 1999 in Austin, TX, serving healthcare organizations nationwide.">
+  <meta property="og:description" content="Learn about Dietary Network Services — a professional dietitian consulting firm founded in 1999 in Austin, TX.">
   <meta property="og:image"       content="https://dietarynetwork.com/images/og-image.webp">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="About | Dietary Network Services">
-  <meta name="twitter:description" content="Learn about Dietary Network Services — a professional dietitian consulting firm founded in 1999 in Austin, TX, serving healthcare organizations nationwide.">
-  <meta name="twitter:image"       content="https://dietarynetwork.com/images/og-image.webp">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Structured Data: Organization + BreadcrumbList -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,17 +33,7 @@
         "name": "Dietary Network Services",
         "legalName": "Dietary Network Services, LLC",
         "url": "https://dietarynetwork.com",
-        "email": "info@dietarynetworkservices.com",
-        "telephone": "+1-512-335-2250",
-        "foundingDate": "1999",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "1108 Lavaca St. Ste. 110-706",
-          "addressLocality": "Austin",
-          "addressRegion": "TX",
-          "postalCode": "78701",
-          "addressCountry": "US"
-        }
+        "foundingDate": "1999"
       },
       {
         "@type": "BreadcrumbList",
@@ -73,7 +56,7 @@
   <header role="banner">
     <div class="container">
       <a href="index.html" class="logo" aria-label="Dietary Network Services — Home">
-        <!-- PHASE 4: Replace with <img src="images/logo.svg" alt="Dietary Network Services" width="200" height="48"> -->
+        <img src="images/logos/DNSlogo.webp" alt="DNS logo" height="48" width="auto">
         <span class="logo-text">Dietary Network Services</span>
       </a>
 
@@ -90,7 +73,17 @@
         <ul id="nav-menu" role="list">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html" aria-current="page">About</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li class="nav-has-dropdown">
+            <a href="services.html" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Services
+              <svg class="dropdown-chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown" role="menu">
+              <a href="services.html#legal-services"    role="menuitem">Legal Case Support</a>
+              <a href="services.html#consulting"         role="menuitem">Consulting</a>
+              <a href="services.html#medical-facilities" role="menuitem">Medical Facilities</a>
+              <a href="services.html#long-term-care"     role="menuitem">Long Term Care Facilities</a>
+            </div>
+          </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -111,7 +104,7 @@
             <li aria-current="page">About</li>
           </ol>
         </nav>
-        <h1 id="page-heading">Time-Tested Excellence, Future-Focused Solutions</h1>
+        <h1 id="page-heading">Dietary Network Service &ndash; Time Tested Excellence</h1>
       </div>
     </section>
 
@@ -130,63 +123,54 @@
             <p>We are a caring organization, committed to the idea that we can bring about healthy changes to our end users, and those changes in turn will create balance in their lives. Our commitment to customer satisfaction is unwavering — we hold ourselves to the highest professional standards in every engagement.</p>
           </article>
 
-          <aside class="about-sidebar" aria-label="Company facts">
-            <!-- PHASE 4: Company photo or graphic here (images/content/about-team.webp) -->
-            <div class="about-facts">
-              <h3>Company at a Glance</h3>
-              <dl>
-                <div class="fact-item">
-                  <dt>Founded</dt>
-                  <dd><time datetime="1999">1999</time></dd>
-                </div>
-                <div class="fact-item">
-                  <dt>Headquarters</dt>
-                  <dd>Austin, TX</dd>
-                </div>
-                <div class="fact-item">
-                  <dt>Personnel</dt>
-                  <dd>Licensed Registered Dietitians</dd>
-                </div>
-                <div class="fact-item">
-                  <dt>Availability</dt>
-                  <dd>Local Staff, National Reach</dd>
-                </div>
-                <div class="fact-item">
-                  <dt>Specialties</dt>
-                  <dd>Long Term Care, Consulting, Medical Facilities, Legal Support</dd>
-                </div>
-              </dl>
-            </div>
-          </aside>
-
         </div>
       </div>
     </section>
 
-    <!-- Values Section -->
+    <!-- What Sets Us Apart -->
     <section class="about-values" aria-labelledby="values-heading">
       <div class="container">
         <h2 id="values-heading">What Sets Us Apart</h2>
         <div class="values-grid">
 
-          <article class="value-card" aria-labelledby="value-experience">
-            <h3 id="value-experience">Experienced Professionals</h3>
-            <p>Every DNS consultant is a licensed, registered dietitian with deep field experience across healthcare settings.</p>
+          <article class="value-card fade-in" aria-labelledby="value-experience">
+            <div class="value-card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+            </div>
+            <div class="value-card-body">
+              <h3 id="value-experience">Experienced Professionals</h3>
+              <p>Every DNS consultant is a licensed, registered dietitian with deep field experience across healthcare settings.</p>
+            </div>
           </article>
 
-          <article class="value-card" aria-labelledby="value-support">
-            <h3 id="value-support">Comprehensive Support</h3>
-            <p>We provide support materials and industry-trained management to ensure consistent, high-quality service delivery.</p>
+          <article class="value-card fade-in" aria-labelledby="value-support">
+            <div class="value-card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="value-card-body">
+              <h3 id="value-support">Comprehensive Support</h3>
+              <p>We provide support materials and industry-trained management to ensure consistent, high-quality service delivery.</p>
+            </div>
           </article>
 
-          <article class="value-card" aria-labelledby="value-availability">
-            <h3 id="value-availability">Local &amp; National</h3>
-            <p>Our local staff bring community knowledge while our national availability means we can scale to meet your needs.</p>
+          <article class="value-card fade-in" aria-labelledby="value-availability">
+            <div class="value-card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div class="value-card-body">
+              <h3 id="value-availability">Local &amp; National</h3>
+              <p>Our local staff bring community knowledge while our national availability means we can scale to meet your needs.</p>
+            </div>
           </article>
 
-          <article class="value-card" aria-labelledby="value-commitment">
-            <h3 id="value-commitment">Customer Commitment</h3>
-            <p>We are committed to delivering healthy, measurable changes — with client satisfaction at the center of everything we do.</p>
+          <article class="value-card fade-in" aria-labelledby="value-commitment">
+            <div class="value-card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <div class="value-card-body">
+              <h3 id="value-commitment">Customer Commitment</h3>
+              <p>We are committed to delivering healthy, measurable changes — with client satisfaction at the center of everything we do.</p>
+            </div>
           </article>
 
         </div>
@@ -199,8 +183,7 @@
         <h2 id="about-cta-heading">Let's Work Together</h2>
         <p>Ready to bring expert dietary consulting to your organization?</p>
         <div class="cta-actions">
-          <a href="services.html" class="btn btn-primary">View Our Services</a>
-          <a href="contact.html" class="btn btn-outline">Contact Us</a>
+          <button class="cta-link" data-open-modal="contact" aria-haspopup="dialog">Get in Touch</button>
         </div>
       </div>
     </section>
@@ -215,15 +198,11 @@
       <div class="footer-grid">
 
         <div class="footer-brand">
-          <a href="index.html" aria-label="Dietary Network Services — Home">
-            <span class="logo-text">Dietary Network Services</span>
-          </a>
+          <p class="footer-company-name">Dietary Network Services, LLC</p>
           <p>Licensed dietitian consulting and expert witness services since 1999.</p>
           <address>
-            1108 Lavaca St. Ste. 110-706<br>
-            Austin, TX 78701<br>
-            <a href="tel:+15123352250">512-335-2250</a><br>
-            <a href="mailto:info@dietarynetworkservices.com">info@dietarynetworkservices.com</a>
+            1108 Lavaca St. Ste. 110-706, Austin, TX 78701<br>
+            <a href="tel:+15123352250">512-335-2250</a>
           </address>
         </div>
 
@@ -255,21 +234,31 @@
     </div>
   </footer>
 
-  <!-- Cookie Consent Banner (Phase 3) -->
+  <!-- Cookie Consent Banner -->
   <div class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="true"
        aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-desc" hidden>
-    <!-- PHASE 3: Cookie consent banner content -->
+    <div class="cookie-banner-inner">
+      <div class="cookie-banner-text">
+        <span id="cookie-banner-title" class="cookie-banner-title">We use cookies</span>
+        <p id="cookie-banner-desc">We use necessary cookies to make our site work. With your consent, we also use analytics cookies to understand how our site is used. <a href="cookie-policy.html">Cookie Policy</a> &middot; <a href="privacy-policy.html">Privacy Policy</a></p>
+      </div>
+      <div class="cookie-banner-actions">
+        <button id="cookie-accept" class="btn-cookie-accept" type="button">Accept All</button>
+        <button id="cookie-reject" class="btn-cookie-reject" type="button">Necessary Only</button>
+      </div>
+    </div>
   </div>
 
   <noscript>
     <p style="text-align:center;padding:1rem;background:#f5c327;color:#1b2a4a;font-family:sans-serif;">
-      This site works best with JavaScript enabled. Some interactive features may not be available without it.
+      This site works best with JavaScript enabled.
     </p>
   </noscript>
 
   <script src="js/cookies.js" defer></script>
   <script src="js/analytics.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/modal.js" defer></script>
 
 </body>
 </html>

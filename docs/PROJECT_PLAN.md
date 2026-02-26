@@ -24,7 +24,7 @@ This is a structured, repeatable project plan that an AI engine executes from st
 
 | Field | Value |
 |---|---|
-| **Current Phase** | Phase 2 — HTML Structure & Semantic Markup |
+| **Current Phase** | Phase 4 Complete — Content Update & Redesign — Ready for Phase 5 |
 | **Last Session Date** | 2026-02-25 |
 | **AI Engine** | Claude Sonnet 4.6 |
 | **Project Start Date** | 2026-02-25 |
@@ -37,9 +37,10 @@ This is a structured, repeatable project plan that an AI engine executes from st
 |---|---|---|
 | — | Project Setup & Plan | ✅ Complete |
 | 1 | Environment Setup | ✅ Complete |
-| 2 | HTML Structure & Semantic Markup | 🔄 In Progress |
-| 3 | Styling & Visual Design | ⬜ Not Started |
-| 4 | Content, Graphics & Media | ⬜ Not Started |
+| 2 | HTML Structure & Semantic Markup | ✅ Complete |
+| 3 | Styling & Visual Design | ✅ Complete |
+| 4 | Content, Graphics & Media | ✅ Complete |
+| 4b | Content Editing System | ⬜ Not Started |
 | 5 | SEO Optimization | ⬜ Not Started |
 | 6 | Security & Legal Compliance | ⬜ Not Started |
 | 7 | Forms, Interactions & Error Handling | ⬜ Not Started |
@@ -51,7 +52,10 @@ This is a structured, repeatable project plan that an AI engine executes from st
 
 | Date | Session Summary |
 |---|---|
-| 2026-02-25 | Project initiated. Source docx converted and PROJECT_PLAN.md created as authority of record. Repository initialized. Phase 1 completed: full directory structure, .gitignore, reset.css, styles.css (all CSS variables), 8 HTML shells, robots.txt, .htaccess with security headers. Colors (#1b2a4a / #f5c327) and font (Inter/Roboto) are placeholders — will update files and plan if changed. Phase Gate 1 approved by designer. |
+| 2026-02-25 | Session 1: Project initiated. PROJECT_PLAN.md created. Phase 1 completed: full directory structure, .gitignore, reset.css, 8 HTML shells, robots.txt, .htaccess. Phase Gate 1 approved. Phase 2: full semantic HTML5 on all 8 pages — header, nav, sections, footer, JSON-LD, aria, skip links. Phase Gate 2 approved. Phase 3: styles.css (~750 lines) — sticky nav, hamburger, hero, service/value cards, buttons, form elements, footer, cookie banner, 404, legal pages, responsive breakpoints. main.js: hamburger, Intersection Observer, active nav. cookies.js: consent/localStorage. analytics.js: deferred GA4. Cookie banner on all 8 pages. |
+| 2026-02-25 | Session 2 — Full Visual Redesign: Designer rejected original navy palette. New brand: Emerald (#246B50) + Amber (#D4882A) + Porcelain (#F4F1E9). Font changed to DM Sans. Full styles.css rewrite (~860 lines) with new design tokens, white header, porcelain hero (two-column, text-link CTA, abstract SVG graphic), emerald-bordered service cards with hover lift, emerald CTA section. Services nav dropdown added (CSS+JS) with keyboard/focus support. All 8 HTML pages updated: DM Sans font, logo SVG img (dark/white variants), Services dropdown in header nav. index.html hero restructured with hero-inner/eyebrow/cta/graphic. Service cards have inline SVG icons + arrow links. All 4 logo SVGs updated to emerald+amber. PROJECT_PLAN.md updated with confirmed brand. |
+| 2026-02-25 | Session 3 — Phase 4 Content & Redesign: Full brand palette change: primary text #011627 (dark navy), accent #e62e01 (red-orange), buttons #1a9011 (green), banner gradient #a8dedb→#c4e32f. Logo converted from cmyk1.jpg (CMYK) to DNSlogo.webp and inserted in all headers with company name text. Nav link size increased 20%. Hero banner changed to gradient (contrasting from page background). Hero text updated: "Expert Dietary & Nutritional Consulting" / "backed by over 35 years." Service panels reordered (Legal→Consulting→Medical→LTC). Learn More changed to green pill buttons. About snippet section removed from home page. CTA banners: 20% shorter, gradient background, popup button. Footer 30% shorter, one-line address, symmetrical. Modal popup system: js/modal.js injects reusable contact form (same fields as contact.html), triggers via data-open-modal="contact", submits to Formspree (recipient: info@dietarynetwork.com). about.html: title updated "Dietary Network Service – Time Tested Excellence", sidebar removed, value cards have icons, CTA = popup only. services.html fully rebuilt: 4 sections × (content panels + aside highlight box), icons on all sub-panels, no jump links, no inquiry buttons. contact.html: form moved to top, company info below, Our Services removed. Phase 4 complete, Phase 5 (SEO) next. NOTE: Formspree PLACEHOLDER must be replaced with real form ID before launch. |
+| 2026-02-25 | Session 4 — Polish & Fixes: (1) Removed email address from contact.html contact info aside — phone number only remains. (2) Added .footer-company-name CSS rule (white, font-weight 600, text-lg) to display company name text cleanly in footer across all 4 pages. (3) Home page services-overview section background changed from white (--color-surface) to porcelain (--color-background: #F4F1E9) to match the consistent page background used on all other pages. (4) Hero section gradient retained (teal→lime, --color-banner-1 → --color-banner-2). (5) Header company name (logo-text) font size increased 20% from 1.05rem to 1.26rem; alignment unchanged. |
 
 ---
 
@@ -69,8 +73,8 @@ This is a structured, repeatable project plan that an AI engine executes from st
 | **Target Audience** | Professional, legal, attorneys, physicians |
 | **Primary Language** | English (US) |
 | **Secondary Languages** | None |
-| **Brand Colors (Hex)** | Primary: `#1b2a4a` · Accent: `#f5c327` |
-| **Preferred Font** | TBD — or AI to choose (Inter, Roboto, or Open Sans recommended) |
+| **Brand Colors (Hex)** | Primary: `#246B50` (emerald) · Accent: `#D4882A` (amber) · Background: `#F4F1E9` (porcelain) · Text: `#1C2B25` |
+| **Preferred Font** | DM Sans (Google Fonts) — weights 300, 400, 500, 700 with optical sizing |
 | **Number of Pages** | Model from existing site |
 | **Logo File** | Plan to upload once file structure is created |
 | **Content Files** | Acquire from existing site |
@@ -289,7 +293,7 @@ This is a structured, repeatable project plan that an AI engine executes from st
 > **AI presents:** desktop and mobile screenshots of every page.
 > **Designer confirms:** visual design, colors, fonts, and spacing match brand requirements.
 >
-> **Status:** ⬜ Awaiting execution
+> **Status:** ✅ Complete — Pending Phase Gate designer sign-off
 
 ---
 
@@ -315,6 +319,49 @@ This is a structured, repeatable project plan that an AI engine executes from st
 > **Designer confirms:** all copy is correct and all images display properly.
 >
 > **Status:** ⬜ Awaiting execution
+
+---
+
+### Phase 4b — Content Editing System
+
+*AI creates a simple, non-technical method for editing all website text without opening code files.*
+
+#### Goal
+
+Enable the designer or client to update any text on any page without touching HTML. All editable content lives in one JavaScript file written as plain key-value pairs. The AI generates and maintains this file. No coding knowledge required.
+
+#### How It Works
+
+1. All editable text strings are stored in a single file: `js/content.js`
+2. Each string has a plain-English key (e.g., `heroHeading`, `heroLead`, `aboutWhoWeAreP1`)
+3. On page load, a small script reads the keys and replaces matching `data-content` attributes in the HTML
+4. To change any text, the designer opens `js/content.js`, finds the key, and edits the value — nothing else
+
+#### Tasks
+
+- [ ] Audit all pages and identify every text block that may need editing (headings, subheadings, body paragraphs, CTA labels, contact details)
+- [ ] Create `js/content.js` — a plain object containing all editable strings, organized by page
+- [ ] Add `data-content="keyName"` attributes to corresponding HTML elements on all 8 pages
+- [ ] Create `js/content-loader.js` — a small script that reads `content.js` and injects text at matching `data-content` attributes on DOM load
+- [ ] Create `docs/CONTENT-GUIDE.md` — a non-technical guide listing every key, what it controls, and which page/section it appears on. One line per key.
+- [ ] Test: change three strings in `content.js` and verify they update live without any HTML edits
+
+#### Content Keys Convention
+
+Keys follow the pattern `[page]_[section]_[element]`:
+- `home_hero_heading` — Home page, hero section, main H1
+- `home_hero_lead` — Home page, hero section, lead paragraph
+- `home_cta_heading` — Home page, CTA section, H2
+- `about_intro_p1` — About page, intro section, first paragraph
+- `contact_address_street` — Contact address, street line
+- (etc. — one key per editable text unit)
+
+#### Phase Gate 4b
+
+> **AI presents:** `content.js` with all keys, `CONTENT-GUIDE.md`, and a live demo showing a text change without touching HTML.
+> **Designer confirms:** the editing system works and is easy to use before proceeding.
+>
+> **Status:** ⬜ Not Started
 
 ---
 

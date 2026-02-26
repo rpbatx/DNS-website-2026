@@ -15,22 +15,15 @@
   <meta property="og:description" content="DNS offers dietary consulting for long-term care facilities, medical practices, executive consulting, and expert witness services for legal professionals.">
   <meta property="og:image"       content="https://dietarynetwork.com/images/og-image.webp">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Services | Dietary Network Services">
-  <meta name="twitter:description" content="DNS offers dietary consulting for long-term care facilities, medical practices, executive consulting, and expert witness services for legal professionals.">
-  <meta name="twitter:image"       content="https://dietarynetwork.com/images/og-image.webp">
-
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Structured Data: Organization + BreadcrumbList -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -39,9 +32,7 @@
         "@type": "Organization",
         "name": "Dietary Network Services",
         "legalName": "Dietary Network Services, LLC",
-        "url": "https://dietarynetwork.com",
-        "email": "info@dietarynetworkservices.com",
-        "telephone": "+1-512-335-2250"
+        "url": "https://dietarynetwork.com"
       },
       {
         "@type": "BreadcrumbList",
@@ -64,7 +55,7 @@
   <header role="banner">
     <div class="container">
       <a href="index.html" class="logo" aria-label="Dietary Network Services — Home">
-        <!-- PHASE 4: Replace with <img src="images/logo.svg" alt="Dietary Network Services" width="200" height="48"> -->
+        <img src="images/logos/DNSlogo.webp" alt="DNS logo" height="48" width="auto">
         <span class="logo-text">Dietary Network Services</span>
       </a>
 
@@ -81,7 +72,17 @@
         <ul id="nav-menu" role="list">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="services.html" aria-current="page">Services</a></li>
+          <li class="nav-has-dropdown">
+            <a href="services.html" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true" aria-current="page">Services
+              <svg class="dropdown-chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown" role="menu">
+              <a href="#legal-services"    role="menuitem">Legal Case Support</a>
+              <a href="#consulting"         role="menuitem">Consulting</a>
+              <a href="#medical-facilities" role="menuitem">Medical Facilities</a>
+              <a href="#long-term-care"     role="menuitem">Long Term Care Facilities</a>
+            </div>
+          </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -107,66 +108,55 @@
       </div>
     </section>
 
-    <!-- Service Nav / Jump Links -->
-    <nav class="service-jumpnav" aria-label="Jump to service section">
-      <div class="container">
-        <ul role="list">
-          <li><a href="#long-term-care">Long Term Care</a></li>
-          <li><a href="#consulting">Consulting</a></li>
-          <li><a href="#medical-facilities">Medical Facilities</a></li>
-          <li><a href="#legal-services">Legal Case Support</a></li>
-        </ul>
-      </div>
-    </nav>
-
     <!-- ==========================================
-         SERVICE 1: LONG TERM CARE FACILITIES
+         SERVICE 1: LEGAL CASE SUPPORT
          ========================================== -->
-    <section id="long-term-care" class="service-section" aria-labelledby="ltc-heading">
+    <section id="legal-services" class="service-section" aria-labelledby="legal-heading">
       <div class="container">
         <div class="service-section-inner">
 
           <div class="service-section-content">
-            <h2 id="ltc-heading">Long Term Care Facilities</h2>
-            <p class="service-lead">DNS provides comprehensive dietary services through experienced professional consultants to long-term care facility operators and staff, offering every level of support needed to ensure your dietary department operates in a smooth, cost-effective, quality, and caring manner.</p>
+            <h2 id="legal-heading">Legal Case Support</h2>
+            <p class="service-lead">DNS has provided expert witness services to the legal community for over 35 years. We specialize in cases involving malnutrition, dehydration, weight loss, and nutritional pressure sore management in long-term care settings.</p>
 
             <div class="service-areas">
 
-              <article class="service-area" aria-labelledby="ltc-clinical">
-                <h3 id="ltc-clinical">Clinical Services</h3>
-                <p>Registered Dietitian consultants provide nutritional assessments, ongoing contract support, vacation coverage, and case-by-case consultations for nutritionally at-risk residents.</p>
+              <article class="service-area fade-in" aria-labelledby="legal-review">
+                <div class="service-area-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                </div>
+                <h3 id="legal-review">Case Reviews</h3>
+                <p>DNS conducts thorough medical record analysis, drawing on expertise in dietary regulations, field experience, medical knowledge, and nursing home operations to deliver clear, defensible case assessments.</p>
               </article>
 
-              <article class="service-area" aria-labelledby="ltc-survey">
-                <h3 id="ltc-survey">Survey Management</h3>
-                <p>We offer pre-survey evaluations, compliance planning, and crisis management during failed inspections — including a 100% track record for survey turnarounds. Focus areas include weight loss, pressure sores, enteral feeding, sanitation, menus, food temperatures, and diet compliance.</p>
+              <article class="service-area fade-in" aria-labelledby="legal-depo">
+                <div class="service-area-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <h3 id="legal-depo">Depositions</h3>
+                <p>Our consultants provide expert interview and deposition services, leveraging deep industry knowledge to support legal teams with authority and confidence.</p>
               </article>
 
-              <article class="service-area" aria-labelledby="ltc-menu">
-                <h3 id="ltc-menu">Menu Development</h3>
-                <p>DNS creates customizable menus with recipes tailored to your facility's population and budget — ensuring nutritional compliance and resident satisfaction.</p>
-              </article>
-
-              <article class="service-area" aria-labelledby="ltc-executive">
-                <h3 id="ltc-executive">Executive Consulting</h3>
-                <p>Leadership receives actionable insight on dietary-related costs, risk management, and revenue generation opportunities in areas such as mechanically altered diets and enteral therapy.</p>
+              <article class="service-area fade-in" aria-labelledby="legal-trial">
+                <div class="service-area-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <h3 id="legal-trial">Trial Support</h3>
+                <p>DNS extends support through trial conclusion, providing on-site dietary expertise when cases reach the courtroom. Clients work with the same consultant from case review through verdict.</p>
               </article>
 
             </div>
-
-            <a href="contact.html" class="btn btn-primary">Inquire About Long Term Care Services</a>
           </div>
 
-          <aside class="service-section-aside" aria-label="Long term care service highlights">
-            <!-- PHASE 4: Service image (images/content/long-term-care.webp) -->
+          <aside class="service-section-aside" aria-label="Legal case support highlights">
             <div class="service-highlight-box">
-              <h3>Why Choose DNS for Long Term Care?</h3>
+              <h3>Legal Case Support</h3>
               <ul role="list">
-                <li>Licensed Registered Dietitians only</li>
-                <li>100% survey turnaround track record</li>
-                <li>Flexible — ongoing contracts or case-by-case</li>
-                <li>Vacation and interim coverage available</li>
-                <li>Customized menus and care plans</li>
+                <li>35+ years expert witness experience</li>
+                <li>Specializing in long-term care dietary disputes</li>
+                <li>Same consultant throughout your case</li>
+                <li>Medical record analysis and case review</li>
+                <li>Deposition and courtroom testimony</li>
               </ul>
             </div>
           </aside>
@@ -188,33 +178,42 @@
 
             <div class="service-areas">
 
-              <article class="service-area" aria-labelledby="consult-cost">
+              <article class="service-area fade-in" aria-labelledby="consult-cost">
+                <div class="service-area-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
                 <h3 id="consult-cost">Cost Analysis</h3>
                 <p>We produce concise, easy-to-read reports that show a true reflection of food, labor, and supplement costs — giving leadership the visibility to make confident financial decisions.</p>
               </article>
 
-              <article class="service-area" aria-labelledby="consult-risk">
+              <article class="service-area fade-in" aria-labelledby="consult-risk">
+                <div class="service-area-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </div>
                 <h3 id="consult-risk">Risk Management</h3>
                 <p>Identify and mitigate dietary-related compliance and operational risks before they become costly problems.</p>
               </article>
 
-              <article class="service-area" aria-labelledby="consult-team">
+              <article class="service-area fade-in" aria-labelledby="consult-team">
+                <div class="service-area-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
                 <h3 id="consult-team">Team Building</h3>
                 <p>Organizational development and team training support to build high-performing dietary departments.</p>
               </article>
 
-              <article class="service-area" aria-labelledby="consult-revenue">
+              <article class="service-area fade-in" aria-labelledby="consult-revenue">
+                <div class="service-area-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                </div>
                 <h3 id="consult-revenue">Revenue Generation</h3>
                 <p>DNS identifies untapped revenue opportunities through areas such as referral programs for mechanically altered diets and enteral therapy management.</p>
               </article>
 
             </div>
-
-            <a href="contact.html" class="btn btn-primary">Inquire About Consulting Services</a>
           </div>
 
-          <aside class="service-section-aside" aria-label="Consulting service highlights">
-            <!-- PHASE 4: Service image (images/content/consulting.webp) -->
+          <aside class="service-section-aside" aria-label="Consulting highlights">
             <div class="service-highlight-box">
               <h3>Consulting Deliverables</h3>
               <ul role="list">
@@ -244,28 +243,34 @@
 
             <div class="service-areas">
 
-              <article class="service-area" aria-labelledby="med-staffing">
+              <article class="service-area fade-in" aria-labelledby="med-staffing">
+                <div class="service-area-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                </div>
                 <h3 id="med-staffing">Flexible Staffing</h3>
                 <p>We provide only the services you need today, with the ability to grow alongside your practice. Our dietitians adapt to your workflow and patient population.</p>
               </article>
 
-              <article class="service-area" aria-labelledby="med-outcomes">
+              <article class="service-area fade-in" aria-labelledby="med-outcomes">
+                <div class="service-area-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
                 <h3 id="med-outcomes">Patient Outcomes</h3>
                 <p>DNS dietitians work with your medical team to ensure productivity, revenue generation, and service quality — with a direct focus on improving patient satisfaction.</p>
               </article>
 
-              <article class="service-area" aria-labelledby="med-partner">
+              <article class="service-area fade-in" aria-labelledby="med-partner">
+                <div class="service-area-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                </div>
                 <h3 id="med-partner">Professional Partnership</h3>
                 <p>We position ourselves as a professional, knowledgeable, and business-oriented partner — delivering customized dietary solutions that differentiate your practice and improve profitability.</p>
               </article>
 
             </div>
-
-            <a href="contact.html" class="btn btn-primary">Inquire About Medical Facility Services</a>
           </div>
 
-          <aside class="service-section-aside" aria-label="Medical facility service highlights">
-            <!-- PHASE 4: Service image (images/content/medical-facilities.webp) -->
+          <aside class="service-section-aside" aria-label="Medical facility highlights">
             <div class="service-highlight-box">
               <h3>Medical Facility Benefits</h3>
               <ul role="list">
@@ -283,48 +288,62 @@
     </section>
 
     <!-- ==========================================
-         SERVICE 4: LEGAL CASE SUPPORT
+         SERVICE 4: LONG TERM CARE FACILITIES
          ========================================== -->
-    <section id="legal-services" class="service-section service-section-alt" aria-labelledby="legal-heading">
+    <section id="long-term-care" class="service-section service-section-alt" aria-labelledby="ltc-heading">
       <div class="container">
         <div class="service-section-inner">
 
           <div class="service-section-content">
-            <h2 id="legal-heading">Legal Case Support</h2>
-            <p class="service-lead">DNS has provided expert witness services to the legal community for over 20 years. We specialize in cases involving malnutrition, dehydration, weight loss, and nutritional pressure sore management in long-term care settings.</p>
+            <h2 id="ltc-heading">Long Term Care Facilities</h2>
+            <p class="service-lead">DNS provides comprehensive dietary services through experienced professional consultants to long-term care facility operators and staff, offering every level of support needed to ensure your dietary department operates in a smooth, cost-effective, quality, and caring manner.</p>
 
             <div class="service-areas">
 
-              <article class="service-area" aria-labelledby="legal-review">
-                <h3 id="legal-review">Case Reviews</h3>
-                <p>DNS conducts thorough medical record analysis, drawing on expertise in dietary regulations, field experience, medical knowledge, and nursing home operations to deliver clear, defensible case assessments.</p>
+              <article class="service-area fade-in" aria-labelledby="ltc-clinical">
+                <div class="service-area-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <h3 id="ltc-clinical">Clinical Services</h3>
+                <p>Registered Dietitian consultants provide nutritional assessments, ongoing contract support, vacation coverage, and case-by-case consultations for nutritionally at-risk residents.</p>
               </article>
 
-              <article class="service-area" aria-labelledby="legal-depo">
-                <h3 id="legal-depo">Depositions</h3>
-                <p>Our consultants provide expert interview and deposition services, leveraging deep industry knowledge to support legal teams with authority and confidence.</p>
+              <article class="service-area fade-in" aria-labelledby="ltc-survey">
+                <div class="service-area-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                </div>
+                <h3 id="ltc-survey">Survey Management</h3>
+                <p>We offer pre-survey evaluations, compliance planning, and crisis management during failed inspections — including a 100% track record for survey turnarounds.</p>
               </article>
 
-              <article class="service-area" aria-labelledby="legal-trial">
-                <h3 id="legal-trial">Trial Support</h3>
-                <p>DNS extends support through trial conclusion, providing on-site dietary expertise when cases reach the courtroom. Clients work with the same consultant from case review through verdict.</p>
+              <article class="service-area fade-in" aria-labelledby="ltc-menu">
+                <div class="service-area-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg>
+                </div>
+                <h3 id="ltc-menu">Menu Development</h3>
+                <p>DNS creates customizable menus with recipes tailored to your facility's population and budget — ensuring nutritional compliance and resident satisfaction.</p>
+              </article>
+
+              <article class="service-area fade-in" aria-labelledby="ltc-executive">
+                <div class="service-area-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+                </div>
+                <h3 id="ltc-executive">Executive Consulting</h3>
+                <p>Leadership receives actionable insight on dietary-related costs, risk management, and revenue generation opportunities in areas such as mechanically altered diets and enteral therapy.</p>
               </article>
 
             </div>
-
-            <a href="contact.html" class="btn btn-primary">Inquire About Legal Case Support</a>
           </div>
 
-          <aside class="service-section-aside" aria-label="Legal case support highlights">
-            <!-- PHASE 4: Service image (images/content/legal-support.webp) -->
+          <aside class="service-section-aside" aria-label="Long term care highlights">
             <div class="service-highlight-box">
-              <h3>Legal Case Support</h3>
+              <h3>Why Choose DNS?</h3>
               <ul role="list">
-                <li>20+ years expert witness experience</li>
-                <li>Specializing in long-term care dietary disputes</li>
-                <li>Same consultant throughout your case</li>
-                <li>Medical record analysis and case review</li>
-                <li>Deposition and courtroom testimony</li>
+                <li>Licensed Registered Dietitians only</li>
+                <li>100% survey turnaround track record</li>
+                <li>Flexible — ongoing contracts or case-by-case</li>
+                <li>Vacation and interim coverage available</li>
+                <li>Customized menus and care plans</li>
               </ul>
             </div>
           </aside>
@@ -338,7 +357,7 @@
       <div class="container">
         <h2 id="services-cta-heading">Have a Question About Our Services?</h2>
         <p>Contact us to discuss your specific needs. We'll match you with the right DNS consultant for your situation.</p>
-        <a href="contact.html" class="btn btn-primary">Contact Us Today</a>
+        <button class="cta-link" data-open-modal="contact" aria-haspopup="dialog">Contact Us Today</button>
       </div>
     </section>
 
@@ -352,15 +371,11 @@
       <div class="footer-grid">
 
         <div class="footer-brand">
-          <a href="index.html" aria-label="Dietary Network Services — Home">
-            <span class="logo-text">Dietary Network Services</span>
-          </a>
+          <p class="footer-company-name">Dietary Network Services, LLC</p>
           <p>Licensed dietitian consulting and expert witness services since 1999.</p>
           <address>
-            1108 Lavaca St. Ste. 110-706<br>
-            Austin, TX 78701<br>
-            <a href="tel:+15123352250">512-335-2250</a><br>
-            <a href="mailto:info@dietarynetworkservices.com">info@dietarynetworkservices.com</a>
+            1108 Lavaca St. Ste. 110-706, Austin, TX 78701<br>
+            <a href="tel:+15123352250">512-335-2250</a>
           </address>
         </div>
 
@@ -392,21 +407,31 @@
     </div>
   </footer>
 
-  <!-- Cookie Consent Banner (Phase 3) -->
+  <!-- Cookie Consent Banner -->
   <div class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="true"
        aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-desc" hidden>
-    <!-- PHASE 3: Cookie consent banner content -->
+    <div class="cookie-banner-inner">
+      <div class="cookie-banner-text">
+        <span id="cookie-banner-title" class="cookie-banner-title">We use cookies</span>
+        <p id="cookie-banner-desc">We use necessary cookies to make our site work. With your consent, we also use analytics cookies to understand how our site is used. <a href="cookie-policy.html">Cookie Policy</a> &middot; <a href="privacy-policy.html">Privacy Policy</a></p>
+      </div>
+      <div class="cookie-banner-actions">
+        <button id="cookie-accept" class="btn-cookie-accept" type="button">Accept All</button>
+        <button id="cookie-reject" class="btn-cookie-reject" type="button">Necessary Only</button>
+      </div>
+    </div>
   </div>
 
   <noscript>
     <p style="text-align:center;padding:1rem;background:#f5c327;color:#1b2a4a;font-family:sans-serif;">
-      This site works best with JavaScript enabled. Some interactive features may not be available without it.
+      This site works best with JavaScript enabled.
     </p>
   </noscript>
 
   <script src="js/cookies.js" defer></script>
   <script src="js/analytics.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/modal.js" defer></script>
 
 </body>
 </html>

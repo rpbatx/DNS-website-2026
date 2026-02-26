@@ -12,25 +12,18 @@
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://dietarynetwork.com/contact.html">
   <meta property="og:title"       content="Contact | Dietary Network Services">
-  <meta property="og:description" content="Contact Dietary Network Services to discuss dietary consulting, long-term care support, or legal expert witness services. Call 512-335-2250 or email us today.">
+  <meta property="og:description" content="Contact Dietary Network Services to discuss dietary consulting, long-term care support, or legal expert witness services.">
   <meta property="og:image"       content="https://dietarynetwork.com/images/og-image.webp">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Contact | Dietary Network Services">
-  <meta name="twitter:description" content="Contact Dietary Network Services to discuss dietary consulting, long-term care support, or legal expert witness services. Call 512-335-2250 or email us today.">
-  <meta name="twitter:image"       content="https://dietarynetwork.com/images/og-image.webp">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Structured Data: Organization + BreadcrumbList -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -72,7 +65,7 @@
   <header role="banner">
     <div class="container">
       <a href="index.html" class="logo" aria-label="Dietary Network Services — Home">
-        <!-- PHASE 4: Replace with <img src="images/logo.svg" alt="Dietary Network Services" width="200" height="48"> -->
+        <img src="images/logos/DNSlogo.webp" alt="DNS logo" height="48" width="auto">
         <span class="logo-text">Dietary Network Services</span>
       </a>
 
@@ -89,7 +82,17 @@
         <ul id="nav-menu" role="list">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li class="nav-has-dropdown">
+            <a href="services.html" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Services
+              <svg class="dropdown-chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown" role="menu">
+              <a href="services.html#legal-services"    role="menuitem">Legal Case Support</a>
+              <a href="services.html#consulting"         role="menuitem">Consulting</a>
+              <a href="services.html#medical-facilities" role="menuitem">Medical Facilities</a>
+              <a href="services.html#long-term-care"     role="menuitem">Long Term Care Facilities</a>
+            </div>
+          </li>
           <li><a href="contact.html" aria-current="page">Contact</a></li>
         </ul>
       </nav>
@@ -111,16 +114,96 @@
           </ol>
         </nav>
         <h1 id="page-heading">Get in Touch</h1>
-        <p class="page-header-intro">Have a need for our services? Have questions? Just want to share a thought? We'd love to hear from you.</p>
+        <p class="page-header-intro">Have a need for our services? Have questions? We'd love to hear from you.</p>
       </div>
     </section>
 
-    <!-- Contact Content -->
+    <!-- Contact Content — Form first, company info below -->
     <section class="contact-section" aria-labelledby="contact-heading">
       <div class="container">
         <div class="contact-grid">
 
-          <!-- Contact Info -->
+          <!-- Contact Form — top/left -->
+          <section class="contact-form-section" aria-labelledby="form-heading">
+            <h2 id="form-heading">Send Us a Message</h2>
+
+            <form id="contact-form"
+                  action="https://formspree.io/f/PLACEHOLDER"
+                  method="POST"
+                  novalidate
+                  aria-label="Contact form">
+
+              <!-- Honeypot spam field -->
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+              <div class="form-group">
+                <label for="name">Name <abbr title="required" aria-label="required">*</abbr></label>
+                <input type="text" id="name" name="name" required autocomplete="name"
+                       aria-required="true" aria-describedby="name-error">
+                <span id="name-error" class="field-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="company">Company / Organization</label>
+                <input type="text" id="company" name="company" autocomplete="organization">
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address <abbr title="required" aria-label="required">*</abbr></label>
+                <input type="email" id="email" name="email" required autocomplete="email"
+                       aria-required="true" aria-describedby="email-error">
+                <span id="email-error" class="field-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Telephone</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel">
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Service of Interest</label>
+                <select id="subject" name="subject">
+                  <option value="">Select a topic...</option>
+                  <option value="legal-services">Legal Case Support</option>
+                  <option value="consulting">Consulting Services</option>
+                  <option value="medical-facilities">Medical Facilities</option>
+                  <option value="long-term-care">Long Term Care Facilities</option>
+                  <option value="general">General Inquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message <abbr title="required" aria-label="required">*</abbr></label>
+                <textarea id="message" name="message" rows="6" required minlength="20"
+                          aria-required="true" aria-describedby="message-error"
+                          placeholder="Tell us about your needs..."></textarea>
+                <span id="message-error" class="field-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group form-consent">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="consent" name="consent" required
+                         aria-required="true" aria-describedby="consent-error">
+                  <span>I consent to Dietary Network Services processing my data to respond to this inquiry.
+                    See our <a href="privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</span>
+                </label>
+                <span id="consent-error" class="field-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Send Message</button>
+
+              <div id="form-success" class="form-status success" role="alert" aria-live="polite" hidden>
+                <p>Thank you for reaching out! We've received your message and will respond within one business day.</p>
+              </div>
+              <div id="form-error" class="form-status error" role="alert" aria-live="polite" hidden>
+                <p>Something went wrong. Please try again or email us at
+                  <a href="mailto:info@dietarynetwork.com">info@dietarynetwork.com</a>.</p>
+              </div>
+
+            </form>
+          </section>
+
+          <!-- Company Information — right/below -->
           <aside class="contact-info" aria-labelledby="contact-info-heading">
             <h2 id="contact-info-heading">Contact Information</h2>
 
@@ -130,7 +213,7 @@
                 <div class="contact-detail-item">
                   <dt>Address</dt>
                   <dd>
-                    DNS<br>
+                    Dietary Network Services, LLC<br>
                     1108 Lavaca St. Ste. 110-706<br>
                     Austin, TX 78701
                   </dd>
@@ -141,136 +224,9 @@
                   <dd><a href="tel:+15123352250">512-335-2250</a></dd>
                 </div>
 
-                <div class="contact-detail-item">
-                  <dt>Email</dt>
-                  <dd><a href="mailto:info@dietarynetworkservices.com">info@dietarynetworkservices.com</a></dd>
-                </div>
-
               </dl>
             </address>
-
-            <div class="contact-service-links">
-              <h3>Our Services</h3>
-              <ul role="list">
-                <li><a href="services.html#long-term-care">Long Term Care Facilities</a></li>
-                <li><a href="services.html#consulting">Consulting</a></li>
-                <li><a href="services.html#medical-facilities">Medical Facilities</a></li>
-                <li><a href="services.html#legal-services">Legal Case Support</a></li>
-              </ul>
-            </div>
           </aside>
-
-          <!-- Contact Form -->
-          <section class="contact-form-section" aria-labelledby="form-heading">
-            <h2 id="form-heading">Send Us a Message</h2>
-
-            <!-- PHASE 7: Full form with validation built here.
-                 Structure below is semantic placeholder. -->
-            <form id="contact-form"
-                  action="https://formspree.io/f/PLACEHOLDER"
-                  method="POST"
-                  novalidate
-                  aria-label="Contact form">
-
-              <!-- Honeypot spam field (hidden from users) -->
-              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-
-              <div class="form-group">
-                <label for="name">
-                  Name <abbr title="required" aria-label="required">*</abbr>
-                </label>
-                <input type="text"
-                       id="name"
-                       name="name"
-                       required
-                       autocomplete="name"
-                       aria-required="true"
-                       aria-describedby="name-error">
-                <span id="name-error" class="field-error" role="alert" aria-live="polite"></span>
-              </div>
-
-              <div class="form-group">
-                <label for="company">Company</label>
-                <input type="text"
-                       id="company"
-                       name="company"
-                       autocomplete="organization">
-              </div>
-
-              <div class="form-group">
-                <label for="email">
-                  Email Address <abbr title="required" aria-label="required">*</abbr>
-                </label>
-                <input type="email"
-                       id="email"
-                       name="email"
-                       required
-                       autocomplete="email"
-                       aria-required="true"
-                       aria-describedby="email-error">
-                <span id="email-error" class="field-error" role="alert" aria-live="polite"></span>
-              </div>
-
-              <div class="form-group">
-                <label for="phone">Telephone</label>
-                <input type="tel"
-                       id="phone"
-                       name="phone"
-                       autocomplete="tel">
-              </div>
-
-              <div class="form-group">
-                <label for="subject">Subject</label>
-                <select id="subject" name="subject">
-                  <option value="">Select a topic...</option>
-                  <option value="long-term-care">Long Term Care Facilities</option>
-                  <option value="consulting">Consulting Services</option>
-                  <option value="medical-facilities">Medical Facilities</option>
-                  <option value="legal-support">Legal Case Support</option>
-                  <option value="general">General Inquiry</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="message">
-                  Message <abbr title="required" aria-label="required">*</abbr>
-                </label>
-                <textarea id="message"
-                          name="message"
-                          rows="6"
-                          required
-                          minlength="20"
-                          aria-required="true"
-                          aria-describedby="message-error"
-                          placeholder="Tell us about your needs..."></textarea>
-                <span id="message-error" class="field-error" role="alert" aria-live="polite"></span>
-              </div>
-
-              <div class="form-group form-consent">
-                <label class="checkbox-label">
-                  <input type="checkbox"
-                         id="consent"
-                         name="consent"
-                         required
-                         aria-required="true"
-                         aria-describedby="consent-error">
-                  <span>I consent to Dietary Network Services processing my data to respond to this inquiry. See our <a href="privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</span>
-                </label>
-                <span id="consent-error" class="field-error" role="alert" aria-live="polite"></span>
-              </div>
-
-              <button type="submit" class="btn btn-primary">Send Message</button>
-
-              <!-- Success / failure messages (Phase 7 JS) -->
-              <div id="form-success" class="form-success" role="alert" aria-live="polite" hidden>
-                <p>Thank you for reaching out! We've received your message and will respond within one business day.</p>
-              </div>
-              <div id="form-error" class="form-error-msg" role="alert" aria-live="polite" hidden>
-                <p>Something went wrong. Please try again or email us directly at <a href="mailto:info@dietarynetworkservices.com">info@dietarynetworkservices.com</a>.</p>
-              </div>
-
-            </form>
-          </section>
 
         </div>
       </div>
@@ -286,15 +242,11 @@
       <div class="footer-grid">
 
         <div class="footer-brand">
-          <a href="index.html" aria-label="Dietary Network Services — Home">
-            <span class="logo-text">Dietary Network Services</span>
-          </a>
+          <p class="footer-company-name">Dietary Network Services, LLC</p>
           <p>Licensed dietitian consulting and expert witness services since 1999.</p>
           <address>
-            1108 Lavaca St. Ste. 110-706<br>
-            Austin, TX 78701<br>
-            <a href="tel:+15123352250">512-335-2250</a><br>
-            <a href="mailto:info@dietarynetworkservices.com">info@dietarynetworkservices.com</a>
+            1108 Lavaca St. Ste. 110-706, Austin, TX 78701<br>
+            <a href="tel:+15123352250">512-335-2250</a>
           </address>
         </div>
 
@@ -326,21 +278,31 @@
     </div>
   </footer>
 
-  <!-- Cookie Consent Banner (Phase 3) -->
+  <!-- Cookie Consent Banner -->
   <div class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="true"
        aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-desc" hidden>
-    <!-- PHASE 3: Cookie consent banner content -->
+    <div class="cookie-banner-inner">
+      <div class="cookie-banner-text">
+        <span id="cookie-banner-title" class="cookie-banner-title">We use cookies</span>
+        <p id="cookie-banner-desc">We use necessary cookies to make our site work. With your consent, we also use analytics cookies to understand how our site is used. <a href="cookie-policy.html">Cookie Policy</a> &middot; <a href="privacy-policy.html">Privacy Policy</a></p>
+      </div>
+      <div class="cookie-banner-actions">
+        <button id="cookie-accept" class="btn-cookie-accept" type="button">Accept All</button>
+        <button id="cookie-reject" class="btn-cookie-reject" type="button">Necessary Only</button>
+      </div>
+    </div>
   </div>
 
   <noscript>
     <p style="text-align:center;padding:1rem;background:#f5c327;color:#1b2a4a;font-family:sans-serif;">
-      This site works best with JavaScript enabled. Some interactive features may not be available without it.
+      This site works best with JavaScript enabled.
     </p>
   </noscript>
 
   <script src="js/cookies.js" defer></script>
   <script src="js/analytics.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/modal.js" defer></script>
 
 </body>
 </html>

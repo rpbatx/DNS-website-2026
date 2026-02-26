@@ -11,7 +11,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/reset.css">
@@ -24,7 +24,7 @@
   <header role="banner">
     <div class="container">
       <a href="index.html" class="logo" aria-label="Dietary Network Services — Home">
-        <span class="logo-text">Dietary Network Services</span>
+        <img src="images/logos/logo-dark.svg" alt="Dietary Network Services" width="200" height="48">
       </a>
       <nav aria-label="Primary navigation">
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
@@ -35,7 +35,17 @@
         <ul id="nav-menu" role="list">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li class="nav-has-dropdown">
+            <a href="services.html" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Services
+              <svg class="dropdown-chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown" role="menu">
+              <a href="services.html#long-term-care" role="menuitem">Long Term Care Facilities</a>
+              <a href="services.html#consulting" role="menuitem">Consulting</a>
+              <a href="services.html#medical-facilities" role="menuitem">Medical Facilities</a>
+              <a href="services.html#legal-services" role="menuitem">Legal Case Support</a>
+            </div>
+          </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -99,7 +109,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" aria-label="Dietary Network Services — Home">
-            <span class="logo-text">Dietary Network Services</span>
+            <img src="images/logos/logo-white.svg" alt="Dietary Network Services" width="180" height="44">
           </a>
           <p>Licensed dietitian consulting and expert witness services since 1999.</p>
           <address>
@@ -133,12 +143,29 @@
     </div>
   </footer>
 
+  <!-- Cookie Consent Banner -->
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="true"
+       aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-desc" hidden>
+    <div class="cookie-banner-inner">
+      <div class="cookie-banner-text">
+        <span id="cookie-banner-title" class="cookie-banner-title">We use cookies</span>
+        <p id="cookie-banner-desc">We use necessary cookies to make our site work. With your consent, we also use analytics cookies to understand how our site is used. No personal data is collected without your consent. <a href="cookie-policy.html">Cookie Policy</a> &middot; <a href="privacy-policy.html">Privacy Policy</a></p>
+      </div>
+      <div class="cookie-banner-actions">
+        <button id="cookie-accept" class="btn-cookie-accept" type="button">Accept All</button>
+        <button id="cookie-reject" class="btn-cookie-reject" type="button">Necessary Only</button>
+      </div>
+    </div>
+  </div>
+
   <noscript>
     <p style="text-align:center;padding:1rem;background:#f5c327;color:#1b2a4a;font-family:sans-serif;">
       This site works best with JavaScript enabled. Some interactive features may not be available without it.
     </p>
   </noscript>
 
+  <script src="js/cookies.js" defer></script>
+  <script src="js/analytics.js" defer></script>
   <script src="js/main.js" defer></script>
 
 </body>

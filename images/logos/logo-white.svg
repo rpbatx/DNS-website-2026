@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 52" width="220" height="52" role="img" aria-label="Dietary Network Services">
+  <title>Dietary Network Services</title>
+  <!-- Amber accent bar -->
+  <rect x="0" y="10" width="3" height="32" rx="1.5" fill="#D4882A"/>
+  <!-- DNS abbreviation — all white -->
+  <text x="12" y="27"
+        font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif"
+        font-size="16"
+        font-weight="700"
+        fill="#ffffff"
+        letter-spacing="3">DNS</text>
+  <!-- Vertical rule -->
+  <line x1="52" y1="14" x2="52" y2="38" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+  <!-- Company name — line 1 -->
+  <text x="62" y="25"
+        font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif"
+        font-size="9.5"
+        font-weight="700"
+        fill="#ffffff"
+        letter-spacing="1">DIETARY NETWORK</text>
+  <!-- Company name — line 2 -->
+  <text x="62" y="38"
+        font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif"
+        font-size="9.5"
+        font-weight="400"
+        fill="rgba(255,255,255,0.80)"
+        letter-spacing="1">SERVICES</text>
+</svg>
