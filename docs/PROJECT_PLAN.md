@@ -24,7 +24,7 @@ This is a structured, repeatable project plan that an AI engine executes from st
 
 | Field | Value |
 |---|---|
-| **Current Phase** | Phase 4 Complete — Content Update & Redesign — Ready for Phase 5 |
+| **Current Phase** | Phase 7 Complete — Forms & Interactions — Ready for Phase 8 |
 | **Last Session Date** | 2026-02-26 |
 | **AI Engine** | Claude Sonnet 4.6 |
 | **Project Start Date** | 2026-02-25 |
@@ -41,9 +41,9 @@ This is a structured, repeatable project plan that an AI engine executes from st
 | 3 | Styling & Visual Design | ✅ Complete |
 | 4 | Content, Graphics & Media | ✅ Complete |
 | 4b | Content Editing System | ⬜ Not Started |
-| 5 | SEO Optimization | ⬜ Not Started |
-| 6 | Security & Legal Compliance | ⬜ Not Started |
-| 7 | Forms, Interactions & Error Handling | ⬜ Not Started |
+| 5 | SEO Optimization | ✅ Complete |
+| 6 | Security & Legal Compliance | ✅ Complete |
+| 7 | Forms, Interactions & Error Handling | ✅ Complete |
 | 8 | Performance Optimization | ⬜ Not Started |
 | 9 | Testing | ⬜ Not Started |
 | 10 | Deployment | ⬜ Not Started |
@@ -56,7 +56,8 @@ This is a structured, repeatable project plan that an AI engine executes from st
 | 2026-02-25 | Session 2 — Full Visual Redesign: Designer rejected original navy palette. New brand: Emerald (#246B50) + Amber (#D4882A) + Porcelain (#F4F1E9). Font changed to DM Sans. Full styles.css rewrite (~860 lines) with new design tokens, white header, porcelain hero (two-column, text-link CTA, abstract SVG graphic), emerald-bordered service cards with hover lift, emerald CTA section. Services nav dropdown added (CSS+JS) with keyboard/focus support. All 8 HTML pages updated: DM Sans font, logo SVG img (dark/white variants), Services dropdown in header nav. index.html hero restructured with hero-inner/eyebrow/cta/graphic. Service cards have inline SVG icons + arrow links. All 4 logo SVGs updated to emerald+amber. PROJECT_PLAN.md updated with confirmed brand. |
 | 2026-02-25 | Session 3 — Phase 4 Content & Redesign: Full brand palette change: primary text #011627 (dark navy), accent #e62e01 (red-orange), buttons #1a9011 (green), banner gradient #a8dedb→#c4e32f. Logo converted from cmyk1.jpg (CMYK) to DNSlogo.webp and inserted in all headers with company name text. Nav link size increased 20%. Hero banner changed to gradient (contrasting from page background). Hero text updated: "Expert Dietary & Nutritional Consulting" / "backed by over 35 years." Service panels reordered (Legal→Consulting→Medical→LTC). Learn More changed to green pill buttons. About snippet section removed from home page. CTA banners: 20% shorter, gradient background, popup button. Footer 30% shorter, one-line address, symmetrical. Modal popup system: js/modal.js injects reusable contact form (same fields as contact.html), triggers via data-open-modal="contact", submits to Formspree (recipient: info@dietarynetwork.com). about.html: title updated "Dietary Network Service – Time Tested Excellence", sidebar removed, value cards have icons, CTA = popup only. services.html fully rebuilt: 4 sections × (content panels + aside highlight box), icons on all sub-panels, no jump links, no inquiry buttons. contact.html: form moved to top, company info below, Our Services removed. Phase 4 complete, Phase 5 (SEO) next. NOTE: Formspree PLACEHOLDER must be replaced with real form ID before launch. |
 | 2026-02-25 | Session 4 — Polish & Fixes: (1) Removed email address from contact.html contact info aside — phone number only remains. (2) Added .footer-company-name CSS rule (white, font-weight 600, text-lg) to display company name text cleanly in footer across all 4 pages. (3) Home page services-overview section background changed from white (--color-surface) to porcelain (--color-background: #F4F1E9) to match the consistent page background used on all other pages. (4) Hero section gradient retained (teal→lime, --color-banner-1 → --color-banner-2). (5) Header company name (logo-text) font size increased 20% from 1.05rem to 1.26rem; alignment unchanged. |
-| 2026-02-26 | Session 5 — Content & Visual Updates: (1) index.html: replaced abstract SVG hero graphic with images/meeting wboard.jpg. (2) about.html: updated "Who We Are" 3-paragraph copy (dietetic professionals, national relationships); added 6-card differentiators grid below "What Sets Us Apart" — cards: 35 Years Experience, Licensed RDs Only, 100% Survey Turnaround, Consistent Consultant Model, National Reach, Full-Service Capability. (3) services.html: updated Legal Case Support lead text (25 years, added nutritional assessment + capabilities paragraph); added "Nutritional analysis" to Legal highlight box list; renamed LTC highlight box heading to "Long Term Care Facilities". (4) css/styles.css: .page-header background changed from surface-alt to teal/lime gradient (applies to about, services, contact page banners); .service-highlight-box ul li font-size increased from var(--text-sm) to 1rem (+2pt); added .hero-graphic img styles; added .differentiators-grid + .differentiator-card CSS. |
+| 2026-02-26 | Session 5 — Content & Visual Updates: (1) index.html: replaced abstract SVG hero graphic with images/meeting wboard.jpg. (2) about.html: updated "Who We Are" 3-paragraph copy (dietetic professionals, national relationships); added 6-card differentiators grid below "What Sets Us Apart" — cards: 35 Years Experience, Licensed RDs Only, 100% Survey Turnaround, Consistent Consultant Model, National Reach, Full-Service Capability. (3) services.html: updated Legal Case Support lead text (25 years, added nutritional assessment + capabilities paragraph); added "Nutritional analysis" to Legal highlight box list; renamed LTC highlight box heading to "Long Term Care Facilities". (4) css/styles.css: .page-header background changed from surface-alt to teal/lime gradient (applies to about, services, contact page banners); .service-highlight-box ul li font-size increased from var(--text-sm) to 1rem (+2pt); added .hero-graphic img styles; added .differentiators-grid + .differentiator-card CSS. (5) Formspree form ID xbdawwpg configured in contact.html and js/modal.js. (6) Favicon set generated (6 files) and linked in all 8 HTML pages. (7) OG image generated (images/og-image.webp, 1200×630). |
+| 2026-02-26 | Session 6 — Phases 5, 6, 7: Phase 5: Added Twitter Card tags to about, services, contact pages. Created sitemap.xml (7 public pages with lastmod/changefreq/priority). Fixed robots.txt — removed Disallow for /css/ and /js/. Verified heading hierarchy and external link rel attributes. Phase 6: Updated .htaccess CSP to add formspree.io to connect-src. Rewrote all 3 legal pages — corrected header (DNSlogo.webp + name), nav dropdown order, footer, added modal.js. Wrote full legal content: Privacy Policy (GDPR+CCPA, 11 sections), Terms of Service (Texas law, 11 sections), Cookie Policy (cookie table, opt-out instructions). Added CSS for cookie tables and legal body elements. Phase 7: Created js/contact.js — validation (required fields, email format, minlength), inline error messages, aria-invalid, blur/input real-time feedback, fetch submit to Formspree, 30-second rate limiting, success state (hides form fields), error state. Added contact.js script to contact.html. Updated 404.html to current header/footer/nav style. |
 
 ---
 
@@ -403,7 +404,7 @@ Keys follow the pattern `[page]_[section]_[element]`:
 > **AI presents:** PageSpeed Insights scores and SEO audit report.
 > **Designer confirms:** all scores meet targets before proceeding.
 >
-> **Status:** ⬜ Awaiting execution
+> **Status:** ✅ Complete — all SEO elements implemented
 
 ---
 
@@ -453,7 +454,7 @@ Keys follow the pattern `[page]_[section]_[element]`:
 > **AI presents:** security header test results (securityheaders.com) and legal page drafts.
 > **Designer reviews and approves** all legal pages before proceeding.
 >
-> **Status:** ⬜ Awaiting execution
+> **Status:** ✅ Complete — .htaccess hardened, all 3 legal pages written (Privacy Policy, Terms of Service, Cookie Policy)
 
 ---
 
@@ -488,7 +489,7 @@ Keys follow the pattern `[page]_[section]_[element]`:
 > **AI presents:** working form demo with all validation states triggered.
 > **Designer confirms:** all error messages display correctly and form submissions are received.
 >
-> **Status:** ⬜ Awaiting execution
+> **Status:** ✅ Complete — js/contact.js built with field validation, fetch submit, rate limiting, blur/input feedback, aria-invalid states. Modal form was already complete in js/modal.js. 404.html and all legal pages updated to current header/footer/nav.
 
 ---
 
@@ -646,6 +647,31 @@ Every JS function must have a one-line comment explaining what it does.
 | **Final Lighthouse Score (Mobile)** | Performance: ___ \| Accessibility: ___ \| Best Practices: ___ \| SEO: ___ |
 | **Designer Approval Signature** | |
 | **Date Signed** | |
+
+---
+
+## POST-LAUNCH TASK — Content Management System (Decap CMS)
+
+> **STATUS: PENDING — Complete after site is live at dietarynetwork.com**
+
+This task was deferred until after launch because it requires the live domain and a configured hosting provider to set up GitHub OAuth.
+
+### What This Does
+Decap CMS (formerly Netlify CMS) adds a password-protected `/admin` web interface to the site. Non-technical users log in with their GitHub account and edit site content through simple forms — no code, no Markdown, no AI required. All edits commit directly to the private GitHub repository and the site updates automatically.
+
+### What Is Required to Set Up
+1. **Site must be live** at its final domain (dietarynetwork.com)
+2. **Hosting must be finalized** — Netlify (easiest, free tier works) or GitHub Pages with OAuth proxy
+3. **GitHub OAuth App** — register one at github.com/settings/developers (takes 5 minutes); provides the secure login for the CMS
+4. **Two files to add to the site:**
+   - `admin/index.html` — loads the CMS interface
+   - `admin/config.yml` — defines which fields are editable and maps them to HTML pages
+
+### Remind Me When Ready
+When the site is live, tell the AI: *"The site is live — set up Decap CMS as noted in the project plan."* The AI will walk through the full setup step by step.
+
+### Estimated Setup Time
+30–45 minutes once hosting and domain are confirmed.
 
 ---
 

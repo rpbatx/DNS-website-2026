@@ -8,7 +8,7 @@
   'use strict';
 
   /* ----- Config ----- */
-  var FORMSPREE_ACTION = 'https://formspree.io/f/PLACEHOLDER';
+  var FORMSPREE_ACTION = 'https://formspree.io/f/xbdawwpg';
 
   /* ----- Inject modal HTML into body ----- */
   var modalHTML = [
@@ -82,8 +82,8 @@
     '        <p>Thank you! We have received your message and will respond within one business day.</p>',
     '      </div>',
     '      <div id="modal-error" class="form-status error" role="alert" aria-live="polite" hidden>',
-    '        <p>Something went wrong. Please try again or email us at',
-    '        <a href="mailto:info@dietarynetwork.com">info@dietarynetwork.com</a>.</p>',
+    '        <p>Something went wrong. Please try again or call us at',
+    '        <a href="tel:+15123352250">512-335-2250</a>.</p>',
     '      </div>',
     '    </form>',
     '  </div>',

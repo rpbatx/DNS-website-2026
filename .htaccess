@@ -47,7 +47,7 @@ RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
     style-src 'self' https://fonts.googleapis.com; \
     font-src 'self' https://fonts.gstatic.com; \
     img-src 'self' data: https://www.google-analytics.com; \
-    connect-src 'self' https://www.google-analytics.com; \
+    connect-src 'self' https://www.google-analytics.com https://formspree.io; \
     frame-ancestors 'none'; \
     base-uri 'self'; \
     form-action 'self' https://formspree.io"
@@ -130,3 +130,8 @@ Options -Indexes
   Order allow,deny
   Deny from all
 </FilesMatch>
+
+# Block direct web access to internal project documentation
+<IfModule mod_rewrite.c>
+  RewriteRule ^docs(/.*)?$ - [F,L]
+</IfModule>
