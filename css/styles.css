@@ -550,6 +550,15 @@ nav[aria-label="Primary navigation"] {
   height: auto;
 }
 
+.hero-graphic img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  display: block;
+}
+
 /* ============================================================
    SECTION 6: SECTION DEFAULTS & PAGE HEADERS
    ============================================================ */
@@ -596,8 +605,7 @@ section {
 }
 
 .page-header {
-  background-color: var(--color-surface-alt);
-  border-bottom: 1px solid var(--color-border);
+  background: linear-gradient(135deg, var(--color-banner-1) 0%, var(--color-banner-2) 100%);
   padding-block: var(--space-10) var(--space-12);
 }
 
@@ -1620,7 +1628,7 @@ footer nav a:hover {
   gap: var(--space-3);
   padding-block: var(--space-3);
   border-bottom: 1px solid rgba(255,255,255,0.12);
-  font-size: var(--text-sm);
+  font-size: 1rem;
   color: rgba(255,255,255,0.90);
   margin: 0;
 }
@@ -1783,6 +1791,47 @@ footer nav a:hover {
 .value-card-body h3 {
   font-size: var(--text-h4);
   margin-block-end: var(--space-2);
+}
+
+/* --- Differentiators Grid (About page, below What Sets Us Apart) --- */
+.differentiators-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  margin-block-start: var(--space-10);
+}
+
+.differentiator-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+}
+
+.differentiator-card h3 {
+  font-size: var(--text-h4);
+  color: var(--color-primary);
+  margin-block-end: var(--space-2);
+}
+
+.differentiator-card p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+  line-height: 1.65;
+}
+
+@media (min-width: 600px) {
+  .differentiators-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .differentiators-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .value-card-body p {
