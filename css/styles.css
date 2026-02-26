@@ -1256,6 +1256,10 @@ select {
   pointer-events: none;
 }
 
+.toast-notification.toast-success {
+  background-color: #1a7a12;
+}
+
 .toast-notification.toast-fade-out {
   opacity: 0;
 }

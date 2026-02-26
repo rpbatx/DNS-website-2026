@@ -18,10 +18,10 @@
 
   var submitBtn = form.querySelector('[type="submit"]');
 
-  /* ----- Toast notification for errors ----- */
-  function showToast(msg) {
+  /* ----- Toast notification (type: 'success' | 'error') ----- */
+  function showToast(msg, type) {
     var toast = document.createElement('div');
-    toast.className = 'toast-notification';
+    toast.className = 'toast-notification' + (type === 'success' ? ' toast-success' : '');
     toast.setAttribute('role', 'alert');
     toast.setAttribute('aria-live', 'assertive');
     toast.textContent = msg;
@@ -119,6 +119,7 @@
       if (response.ok) {
         lastSubmitTime = Date.now();
         form.reset();
+        showToast('Thank you — we look forward to meeting you!', 'success');
       } else {
         return response.json().then(function (json) {
           throw new Error(json.error || 'Submission failed.');
