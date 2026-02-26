@@ -1235,6 +1235,31 @@ select {
   border: 1px solid rgba(181, 58, 42, 0.25);
 }
 
+/* ----- Toast Notification (form submission errors) ----- */
+.toast-notification {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #b53a2a;
+  color: #fff;
+  padding: 0.875rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  z-index: 10000;
+  max-width: min(480px, 90vw);
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.toast-notification.toast-fade-out {
+  opacity: 0;
+}
+
 /* ============================================================
    SECTION 16: LEGAL PAGES
    ============================================================ */

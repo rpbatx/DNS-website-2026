@@ -2,6 +2,8 @@
    Reusable popup contact form. Opens on any element with
    data-open-modal="contact" attribute.
    Submits to Formspree; replace FORM_ID with your Formspree form ID.
+   On success: closes modal automatically.
+   On error: shows floating toast notification.
    ============================================================ */
 
 (function initModal() {
@@ -78,13 +80,6 @@
     '',
     '      <button type="submit" class="btn btn-primary" id="modal-submit">Send Message</button>',
     '',
-    '      <div id="modal-success" class="form-status success" role="alert" aria-live="polite" hidden>',
-    '        <p>Thank you! We have received your message and will respond within one business day.</p>',
-    '      </div>',
-    '      <div id="modal-error" class="form-status error" role="alert" aria-live="polite" hidden>',
-    '        <p>Something went wrong. Please try again or call us at',
-    '        <a href="tel:+15123352250">512-335-2250</a>.</p>',
-    '      </div>',
     '    </form>',
     '  </div>',
     '</div>'
@@ -96,8 +91,22 @@
   var closeBtn = document.getElementById('modal-close-btn');
   var form     = document.getElementById('modal-contact-form');
   var submitBtn = document.getElementById('modal-submit');
-  var successMsg = document.getElementById('modal-success');
-  var errorMsg   = document.getElementById('modal-error');
+
+  /* ----- Toast notification for errors ----- */
+  function showToast(msg) {
+    var toast = document.createElement('div');
+    toast.className = 'toast-notification';
+    toast.setAttribute('role', 'alert');
+    toast.setAttribute('aria-live', 'assertive');
+    toast.textContent = msg;
+    document.body.appendChild(toast);
+    setTimeout(function () {
+      toast.classList.add('toast-fade-out');
+      setTimeout(function () {
+        if (toast.parentNode) toast.parentNode.removeChild(toast);
+      }, 400);
+    }, 5000);
+  }
 
   /* ----- Open / Close ----- */
   function openModal() {
@@ -163,7 +172,7 @@
     field.addEventListener('blur', function () { validateField(field); });
   });
 
-  /* ----- Submit via Formspree (emails to configured recipient) ----- */
+  /* ----- Submit via Formspree ----- */
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -177,8 +186,6 @@
 
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending...';
-    successMsg.hidden = true;
-    errorMsg.hidden   = true;
 
     var data = new FormData(form);
 
@@ -189,8 +196,8 @@
     })
     .then(function (response) {
       if (response.ok) {
-        successMsg.hidden = false;
         form.reset();
+        closeModal();
       } else {
         return response.json().then(function (json) {
           throw new Error(json.error || 'Submission failed.');
@@ -198,7 +205,7 @@
       }
     })
     .catch(function () {
-      errorMsg.hidden = false;
+      showToast('Something went wrong. Please try again or call us at 512-335-2250.');
     })
     .finally(function () {
       submitBtn.disabled = false;

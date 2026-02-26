@@ -1,6 +1,7 @@
 /* === CONTACT.JS — Dietary Network Services ===
    Handles validation and fetch submission for the contact page form.
-   Mirrors the validation pattern used in modal.js.
+   On success: form resets silently.
+   On error: shows floating toast notification.
    ============================================================ */
 
 (function initContactForm() {
@@ -12,15 +13,28 @@
   var COOLDOWN_MS = 30000;
   var lastSubmitTime = 0;
 
-  var form       = document.getElementById('contact-form');
+  var form      = document.getElementById('contact-form');
   if (!form) return; /* Not on the contact page — exit early */
 
-  var submitBtn  = form.querySelector('[type="submit"]');
-  var successMsg = document.getElementById('form-success');
-  var errorMsg   = document.getElementById('form-error');
+  var submitBtn = form.querySelector('[type="submit"]');
+
+  /* ----- Toast notification for errors ----- */
+  function showToast(msg) {
+    var toast = document.createElement('div');
+    toast.className = 'toast-notification';
+    toast.setAttribute('role', 'alert');
+    toast.setAttribute('aria-live', 'assertive');
+    toast.textContent = msg;
+    document.body.appendChild(toast);
+    setTimeout(function () {
+      toast.classList.add('toast-fade-out');
+      setTimeout(function () {
+        if (toast.parentNode) toast.parentNode.removeChild(toast);
+      }, 400);
+    }, 5000);
+  }
 
   /* ----- Field Validation ----- */
-  /* Validates a single input and sets aria-invalid + error message */
   function validateField(input) {
     var errorEl = document.getElementById(input.id + '-error');
     if (!errorEl) return true;
@@ -47,7 +61,6 @@
     return valid;
   }
 
-  /* Validate all required fields and return overall pass/fail */
   function validateAll() {
     var fields   = form.querySelectorAll('[required]');
     var allValid = true;
@@ -57,16 +70,14 @@
     return allValid;
   }
 
-  /* ----- Blur Validation (real-time feedback on leave) ----- */
+  /* ----- Blur / Input Validation ----- */
   form.querySelectorAll('input, textarea, select').forEach(function (field) {
     field.addEventListener('blur', function () {
-      /* Only validate if the field has been touched */
       if (field.value !== '' || field === document.activeElement) {
         validateField(field);
       }
     });
 
-    /* Clear error as soon as user starts correcting a field */
     field.addEventListener('input', function () {
       var errorEl = document.getElementById(field.id + '-error');
       if (errorEl && field.getAttribute('aria-invalid') === 'true') {
@@ -83,26 +94,19 @@
     var now = Date.now();
     if (now - lastSubmitTime < COOLDOWN_MS) {
       var remaining = Math.ceil((COOLDOWN_MS - (now - lastSubmitTime)) / 1000);
-      if (errorMsg) {
-        errorMsg.querySelector('p').textContent = 'Please wait ' + remaining + ' seconds before sending another message.';
-        errorMsg.hidden = false;
-      }
+      showToast('Please wait ' + remaining + ' seconds before sending another message.');
       return;
     }
 
     /* Run full validation */
     if (!validateAll()) {
-      /* Focus first invalid field */
       var firstInvalid = form.querySelector('[aria-invalid="true"]');
       if (firstInvalid) firstInvalid.focus();
       return;
     }
 
-    /* Disable submit and show loading state */
-    submitBtn.disabled     = true;
-    submitBtn.textContent  = 'Sending\u2026';
-    if (successMsg) successMsg.hidden = true;
-    if (errorMsg)   errorMsg.hidden   = true;
+    submitBtn.disabled    = true;
+    submitBtn.textContent = 'Sending\u2026';
 
     var data = new FormData(form);
 
@@ -114,12 +118,6 @@
     .then(function (response) {
       if (response.ok) {
         lastSubmitTime = Date.now();
-        /* Hide form fields, show success */
-        form.querySelectorAll('.form-group').forEach(function (g) {
-          g.style.display = 'none';
-        });
-        submitBtn.style.display = 'none';
-        if (successMsg) successMsg.hidden = false;
         form.reset();
       } else {
         return response.json().then(function (json) {
@@ -128,12 +126,7 @@
       }
     })
     .catch(function () {
-      if (errorMsg) {
-        /* Restore original error message in case it was changed by rate limiter */
-        var p = errorMsg.querySelector('p');
-        if (p) p.innerHTML = 'Something went wrong. Please try again or call us at <a href="tel:+15123352250">512-335-2250</a>.';
-        errorMsg.hidden = false;
-      }
+      showToast('Something went wrong. Please try again or call us at 512-335-2250.');
     })
     .finally(function () {
       submitBtn.disabled    = false;
