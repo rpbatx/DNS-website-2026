@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \":*)",
+      "Bash(git add js/contact.js js/contact.min.js css/styles.css css/styles.min.css)",
+      "WebFetch(domain:rpbatx.github.io)",
+      "Bash(git add privacy-policy.html terms-of-service.html cookie-policy.html)"
+    ]
+  }
+}
